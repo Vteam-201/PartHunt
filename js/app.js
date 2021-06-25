@@ -19,8 +19,8 @@ const Posts = function( newPosts ) {
   this.newPosts = newPosts;
 };
 
-Posts.prototype.addPost = function( id, companyID, jobTitle, jobDescription, jobCategory, jobShift, payRate ) {
-  let newPost = new NewPost( id, companyID, jobTitle, jobDescription, jobCategory, jobShift, payRate );
+Posts.prototype.addPost = function( id, companyID, jobTitle, jobDescription, jobCategory, jobShift, payRate, companySrc ) {
+  let newPost = new NewPost( id, companyID, jobTitle, jobDescription, jobCategory, jobShift, payRate ,companySrc);
   this.newPosts.push( newPost );
 };
 Posts.prototype.saveToLocalStorage = function() {
@@ -40,7 +40,7 @@ Posts.prototype.append = function(){
     `  
        <img src="./res/${i.companyID}.jpg" alt="">
        <h3>${i.jobTitle}</h3>
-       <p>${i.jobDescription}</p>
+       <p >${(i.jobDescription).substring(0,134)} ${' ....'}</p>
        <a href="#${i.id}" class='showModal'>Read More</a> `;
     section.appendChild( article );
   }
@@ -52,33 +52,53 @@ Posts.prototype.appendModalData = function( id ){
   for ( const i of this.newPosts ) {
     if ( i.id === id ){
       document.getElementById( 'modalTitle' ).textContent = i.jobTitle;
-      document.getElementById( 'modalContent' ).textContent = i.jobDescription;
-
-
+      document.getElementById( 'modalContent' ).innerHTML = `<p></p>
+      <p>Job Description : ${i.jobDescription}</p><br>`;
+      document.getElementById('modalCategory').textContent = ` ${i.jobCategory}`;
+           document.getElementById('modalShift').textContent = `Shift : ${i.jobShift}`;
+           document.getElementById('modalPayRate').textContent = `Pay Rate : ${i.payRate}`;
+      document.getElementById('company-logo').src = i.companySrc1;
     }
 
   }
 };
 
-const NewPost = function( id, companyID, jobTitle, jobDescription, jobCategory, jobShift, payRate ){
+const NewPost = function( id, companyID, jobTitle, jobDescription, jobCategory, jobShift, payRate,companySrc ){
   this.id = id;
   this.companyID = companyID;
   this.jobTitle = jobTitle;
   this.jobDescription = jobDescription;
-  this.id = id;
+  this.id = id; // we don't need this !
   this.jobCategory = jobCategory;
   this.jobShift = jobShift;
   this.payRate = payRate;
+  this.companySrc1 =`./res/${companySrc}` ;
 };
 
 //initial Values
 const posts = new Posts( [] );
-posts.addPost( '1','1','Marketing officer','Required for a leading contracting and solar energy company in Mafraq. Residents of Mafraq or Zarqa are preferred'
-  ,'Marketing','A','10JD/Hour' );
-posts.addPost( `${generateNewID( posts.newPosts )}`,'2','Accountant','An accountant is required to work in a company working in the field of medical company working in the field of laboratories in Jordan:'
-  ,'Accounting','C','7JD/Hour' );
+posts.addPost( '1','1','Marketing officer',`Responsible for handling customers’ interactions
+Responsible for communicating with customers’ via multiple channels
+Answer all incoming requests and address customers’ problems in a timely manner
+Log all necessary interaction details as instructed
+Re-direct requests as per the set processes and take full information as required
+Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues
+Escalate issues or unresolved queries to the Team Leader or Supervisor as directed
+ 
+Skills
+The minimum requirements for this position are;
+Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic
+Excellent communication (written, verbal and listening skills) in both language
+Sales skill is a plus
+Ability to work alternating shifts, weekends and holidays based on business needs
+Basic customer service skills
+Problem solving and analytical thinking
+Reporting skills Responsible for handling customers’ interactions Responsible for communicating with customers’ via multiple channels Answer all incoming requests and address customers’ problems in a timely manner Log all necessary interaction details as instructed Re-direct requests as per the set processes and take full information as required Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues Escalate issues or unresolved queries to the Team Leader or Supervisor as directed Skills The minimum requirements for this position are; Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic Excellent communication (written, verbal and listening skills) in both language Sales skill is a plus Ability to work alternating shifts, weekends and holidays based on business needs Basic customer service skills Problem solving and analytical thinking Reporting skills`
+  ,'Marketing','A','10JD/Hour','1.jpg');
+posts.addPost( `${generateNewID( posts.newPosts )}`,'2','Accountant',`The Senior Communications Coordinator, will lead a dynamic and multi-faceted communications portfolio for the Mercy Corps Syria office. S/he will work closely with the Syria team in developing and disseminating internal and external communications products. The Senior Communications Coordinator will design new internal and external communications strategies, tools, products and deliverables and will conceptualize strategies for visualizing/conveying information to a wide variety of internal audiences including Mercy Corps globally. S/he will ensure that teams adhere to all Mercy Corps’ and donors’ branding and visibility policies and procedures. The Senior Internal Communications Coordinator will provide critical coordination in the communication & information flow for the COVID-19 response. The Senior Communications Coordinator will report to the Grants Management Director while working closely with senior leadership.`
+  ,'Accounting','C','7JD/Hour' ,'2.jpg');
 posts.addPost( `${generateNewID( posts.newPosts )}`,'3','Customer Service Advisor','Responsible for handling customers’ interactions and communicating with customers’ via multiple channels'
-  ,'Sales and Marketing','A','10JD/Hour' );
+  ,'Sales and Marketing','A','10JD/Hour','3.jpg' );
 
 
 posts.saveToLocalStorage();
