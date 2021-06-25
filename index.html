@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About us page</title>
+  <title>Home Page- JobPool</title>
   <link rel="shortcut icon" type="image/jpg" href="./res/logo.png" />
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
@@ -16,8 +16,8 @@
     <header id="myHeader">
       <img src="./res/logo.png" alt="">
       <nav>
-        <a href="">Home</a>
-        <a href="">Pool</a>
+        <a href="index.html" class='active'>Home</a>
+        <a href="./pages/pool.html">Pool</a>
         <!-- <a href="">Resources</a> -->
         <!-- <a href="">Blog</a> -->
       </nav>
@@ -46,33 +46,59 @@
   <div id="myModal" class="modal">
     <div class="modal-header">
       <span class="close">&times;</span>
-      <label id="modalTitle" class="modalTitle"></label> 
+
+      <label id="modalTitle" class="modalTitle"></label>
     </div>
-    <div class="modal-content">
-      <div class="right">
+    <div id='modalContent' class="modal-content">
+         <div class="right">
         <img src="" alt="company-logo" id="company-logo" width="200" height="200">
       </div>
       <div class="left">
-        <p id='modalContent'></p>
-        <ul>
+           <ul>
           <li id="modalCategory"></li>
           <li id="modalPayRate"></li>
           <li id="modalShift" ></li>
         </ul>
-      
-     
-      
-      </div>
+           </div>
     </div>
-    <div class="modal-footer">
+     <div class="modal-footer">
       <div class="interacte">
-        <button class="fa fa-thumbs-up"></button>
+     <button class="fa fa-thumbs-up"></button>
       <button class="fa fa-share-alt"></button>
       <button class='fas fa-comment-dots'></button>
       <button>Apply</button>
       </div>
     </div>
   </div>
+  <div id="registerModal" class="modal">
+    <div class="modal-header">
+      <span class="close" id='closeLoginRegform'>&times;</span>
+      <label>Account Registration</label>
+    </div>
+    <div class="modal-content">
+      <nav>
+        <a href="" id='jobSeekerReg'>Job Seeker</a>
+        <a href="" id='companyReg'>Company </a>
+      </nav>
+      <nav>
+      </nav>
+    </div>
+  </div>
+
+  <button type="button" class="open-button" id="openNewFormbtn">Account</button>
+  <div class="form-popup" id="loginRegisterForm">
+    <form action="" class="form-container">
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <button type="submit" class="btn" id="loginBtn">Login</button>
+      keep me signed In.<input type="checkbox" ><br>
+      <span>Dont have an account ? <a href="#registerModal" id="registerLink">Register</a></span>
+      <button type="button" class="btn cancel" id="closeFormbtn">Close</button>
+    </form>
+  </div>
+
+
   <script src="https://kit.fontawesome.com/9e5d1913ca.js" crossorigin="anonymous"></script>
   <script src="./js/style.js"></script>
   <script src="./js/app.js"></script>

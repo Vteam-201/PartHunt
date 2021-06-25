@@ -92,7 +92,7 @@ header nav a:hover::after {
   bottom: 0;
   position: absolute;
   background: #00d9ff;
-  
+
 }
 
 main {
@@ -126,7 +126,7 @@ main {
   top: 0;
   width: 100%;
   height: 100%;
- 
+
   /* z-index: 9; */
 }
 
@@ -168,7 +168,7 @@ main {
   background: linear-gradient(-45deg, #164D62, #0798CF) ;
   transition: all 550ms;
   margin-top: 5px;
-  
+
 }
 
 
@@ -436,6 +436,114 @@ button:hover{
   cursor: pointer;
 }
 
+
+.open-button {
+  background-color: #A5A5A5;
+  color: #FFF;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #04AA6D;
+  color: #c4b8b8;
+  text-shadow: 2px 2px 4px #000000;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+  margin-top: 2px;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.modal-content nav {
+  text-align: center;
+ width: 100%;
+  font-size: 26px;
+  color: #0798CF;
+}
+
+a:visited {color:#5f5d5d;}
+a {color:#FF0000;}
+.modal-content nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.3));
+  padding: 10px 20px;
+  transition: all 550ms;
+  width: 150px;
+
+
+}
+
+.modal-content nav a:hover {
+  background: #F2F2F2;
+  color: #0798CF;
+  position: relative;
+
+
+}
+
+.modal-content nav a:hover::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background: #00d9ff;
+}
+
+.modal-header {
+  background: url('../res/parallax.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;}
 .modal-content p {
   margin-left:15px;
   font-size: 14px;
@@ -464,4 +572,5 @@ button:hover{
 } 
 .modal-content ul{
   list-style: circle;
+
 }
