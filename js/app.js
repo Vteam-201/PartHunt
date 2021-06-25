@@ -106,9 +106,7 @@ document.getElementsByClassName( 'close' )[0].addEventListener( 'click',hideModa
 
   };
 } );
-function hideModal () {
-  modal.style.display = 'none';
-}
+
 // close modal when clicking outside.
 window.onclick = function( event ) {
   if ( event.target === modal ) {
@@ -184,3 +182,35 @@ company.saveToLocalStorage();
 
 
 //#region
+
+let loginRegisterForm = document.getElementById( 'loginRegisterForm' );
+loginRegisterForm.style.display = 'none';
+let registrationModal = document.getElementById( 'registerModal' );
+let registerLink = document.getElementById( 'registerLink' );
+
+registerLink.addEventListener( 'click',openLoginregisterForm );
+
+function openLoginregisterForm()
+{
+  registrationModal.style.display = 'block';
+  toggleForm();
+}
+
+let closeBtn = document.getElementById( 'closeFormbtn' );
+closeBtn.addEventListener( 'click', toggleForm );
+let openFormbtn = document.getElementById( 'openNewFormbtn' );
+openFormbtn.addEventListener( 'click', toggleForm );
+
+function toggleForm() {
+  if ( loginRegisterForm.style.display === 'block' ) {
+    loginRegisterForm.style.display = 'none';
+  } else {
+    loginRegisterForm.style.display = 'block';
+
+  }
+}
+
+function hideModal () {
+  modal.style.display = 'none';
+  registrationModal.style.display = 'none';
+}
