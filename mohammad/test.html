@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test</title>
+    <link rel="stylesheet" href="substyle.css">
 </head>
+
 <body>
-    
+<div style="width:500px;height: 600px;    ">
+    <form action="">
+        <input type="text" id="Jobtitle" name="jobtitle" placeholder=" Job Title"><br><br>
+        <!-- <label for="JobDescription">Job Description:</label><br> -->
+        <textarea rows="10" cols="50" placeholder="Write your Job Description ..."></textarea><br>
+        <section>
+
+            <label for="JobCategory" class="JobCategory" id="JobCategory">Job Category</label><br>
+            <!-- <input type="text" id="jobcategory" name="job" value=" "><br> -->
+            <select name="Category" id="Category ">
+                <option value="Sales"> Sales </option>
+                <option value="Business, Management and Administration">Business, management and administration</option>
+                <option value="Community and Social Services"> Community and social services </option>
+                <option value="Science and Technology"> Science and technology </option>
+                <option value="Repair and Maintenance"> repair and maintenance </option>
+                <option value="Farming, Fishing and Forestry"> Farming, fishing and forestry </option>
+                <option value="Health and Medicine"> Health and medicine </option>
+                <option value="Transportation, Distribution and Logistics"> Transportation, Distribution and Logistics
+                </option>
+
+                <option value="Law and public policy"> Law and public policy </option>
+                <option value="Education"> Education </option>
+                <option value="Communications"> Communications </option>
+                <option value="Architecture and Engineering"> Architecture and engineering </option>
+                <option value="Construction and Extraction Occupations"> Construction and Extraction Occupations
+                </option>
+                <option value="Food Preparation and Serving Related Occupations"> Food Preparation and Serving Related
+                    Occupations </option>
+
+
+                <option value=" Operatives"> Operatives</option>
+                <option value="Administrative Support Workers">Community and social services</option>
+                <option value="Protective Service Occupations">Protective Service Occupations</option>
+                <option value="Craft Workers.">Craft Workers.</option>
+                <option value="Technicians">Technicians</option>
+                <option value="Media"> Media</option>
+                <option value="Finance">Finance</option>
+                <option value="Hospitality and Tourism">Hospitality and Tourism</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Government and Public Administration">Government and Public Administration</option>
+                <option value="Training">Training</option>
+            </select></br>
+            <label for="JobShift" class="JobShift" id="JobShift">Job Shift</label><br>
+            <select name="JobShift" id="Jobshift">
+                <option value="EarlyMorning"> Early Morning </option>
+                <option value="Morning"> Morning </option>
+                <option value="Evening">Evening</option>
+                <option value="Night">Night</option>
+            </select></br>
+            <label for="StartingDate" class="StartingDate" id="StartingDate">Starting Date </label><br>
+            <input type="date" id="StartingDate" name="StartingDate"> <br>
+            <label for="PayRate">Pay Rate / PerHour / JD</label><br>
+            <input type="number" id="PayRate" name="payRate" value=" "><br>
+            <input class="button" type="submit" value="Submit">
+        </section>
+    </form>
+</div>
+  
+
 </body>
 </html>
