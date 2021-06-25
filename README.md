@@ -1,8 +1,5 @@
  # V-Team
 
-
-
-
 * Odeh Abuzaid
 * Mohammed Al Homedi
 * Renad Al-Khafat
