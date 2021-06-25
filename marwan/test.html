@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./marwan.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <div class="container">
+        <div class="header"></div>
+
+
+        <main>
+            <section class="f1">
+               
+                    <p>Registration</p>
+                    <form>
+                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required> <br>
+                        <input type="Lastname" name="Last name" id="Last name" placeholder="Last name"
+                            autocomplete="on" required> <br>
+                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
+                            required=""> <br>
+                        <input type="Enteralogin" name="Enter a login" id="Enter a login" placeholder="Enter a login"
+                            autocomplete="on" required> <br>
+                        <input type="password" name="Enter a password" id="Enter a password"
+                            placeholder="Enter a password" autocomplete="on" required> <br>
+                        <input type="password" name="Confirm password" id="Confirm password"
+                            placeholder="Confirm password" autocomplete="on" required> <br>
+                        <input type="number" name="Phone number" id="Phone number" placeholder="Phone number"
+                            autocomplete="on" required> <br>
+
+                        <input type="submit" value="Register"> <br>
+                    </form>
+               
+            </section>
+
+            <section class="f2">
+
+                
+                    <form>
+                        <p>Completing registration <br>
+                            Please provide real information about yourself that you can confirm with documents if
+                            necessary.
+                        </p>
+                        <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required> <br>
+                        <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on"
+                            required>
+                        <br>
+
+                        <select name="GENDER" id="GENDER" form="GENDERform">
+                            <option value="GENDER ">GENDER</option><br>
+                            <option value="MALE ">MALE </option><br>
+                            <option value="FEMALE ">FEMALE</option><br><br>
+
+
+
+
+
+                            <label for="datemin"> DATE OF BIRTH: </label>
+                            <input type="date" id="datemin" name="datemin" min="2000-01-01"><br>
+
+
+                            <input type="name" name="Nationality " id="Nationality " placeholder="Nationality "
+                                autocomplete="on" required> <br>
+
+
+                            <label for="  Studying"> Studying</label>
+                            <input type="checkbox" id="  Studying" name="  Studying" value="  Studying"><br>
+
+                            <select name="EDUCATION" id="EDUCATION" form="eduform">
+                                <option value="EDUCATIONEDUCATION ">EDUCATION </option><br>
+                                <option value="secondary">Secondary</option><br>
+                                <option value="bachelor ">Bachelor </option><br>
+                                <option value="masters ">Masters </option><br>
+
+                            </select><br>
+
+<style>      .multiselect {
+    width: 200px;
+  }
+  
+  .selectBox {
+    position: relative;
+  }
+  
+  .selectBox select {
+    width: 100%;
+    font-weight: bold;
+  }
+  
+  .overSelect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+  #checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+  }
+  
+  #checkboxes label {
+    display: block;
+  }
+  
+  #checkboxes label:hover {
+    background-color: #1e90ff;
+  }
+
+</style>
+
+                           
+
+
+                            <div class="multiselect">
+                                <div class="selectBox" onclick="showCheckboxes()">
+                                    <select>
+                                        <option>LANGUAGES</option>
+                                    </select>
+                                    <div class="overSelect"></div>
+                                </div>
+                                <div id="checkboxes">
+                                    <label for="one">
+                                        <input type="checkbox" id="one" /> Arabic</label>
+                                    <label for="two">
+                                        <input type="checkbox" id="two" />English</label>
+                                    <label for="three">
+                                        <input type="checkbox" id="three" />Spanish</label>
+                                    <label for="four">
+                                        <input type="checkbox" id="four" />French</label>
+                                    <label for="five">
+                                        <input type="checkbox" id="five" />Chinese</label>
+
+                                </div>
+                            </div> <br>
+
+
+
+
+
+
+
+                            <select name="PART-TIME SHIFT" id="PART-TIME SHIFT" form="shiftform">
+                                <option value="PART-TIME SHIFT ">PART-TIME SHIFT </option><br>
+                                <option value="Early morning ">Early morning </option><br>
+                                <option value="Late  morning "> Morning </option><br>
+                                <option value="Evening  ">Evening </option><br>
+                                <option value="Night ">Night </option><br>
+    </div>
+
+    </select><br>
+
+    <p>PERMANENT RESIDENCE </p>
+    <br>
+
+
+    <div id="widget">
+        <form>
+            Region <select onchange="set_country(this,country,city_state)" size="1" name="">
+                <option value="" selected="selected">Middle East</option>
+                <option value=""></option>
+                <script type="text/javascript">
+                    setRegions(this);
+                </script>
+            </select>
+            Country <select name="country" size="1" onchange="set_city_state(this,city_state)">
+                <option value="" selected="selected" Country <option value=""></option>
+            </select>
+            City/State <select name="city_state" size="1" onchange="print_city_state(country,this)"></select>
+        </form>
+        <div id="txtregion"></div>
+        <div id="txtplacename"></div>
+    </div>
+
+    <select name="CURRENT STATUS" id="CURRENT STATUS" form="statuasform">
+        <option value="CURRENT STATUS ">CURRENT STATUS </option><br>
+        <option value="Full-time employee">Full-time employee</option><br>
+        <option value="Part-time employee ">Part-time employee </option><br>
+        <option value=" Unemployed  "> Unemployed </option><br>
+    </select><br>
+
+
+    <label for="AGREE TO TERMS AND CONDITIONS"> I AGREE TO TERMS AND CONDITIONS</label>
+
+    <input type="checkbox" id="AGREE TO TERMS AND CONDITIONS" name="AGREE TO TERMS AND CONDITIONS"
+        value="AGREE TO TERMS AND CONDITIONS"> <br>
+
+
+    <input type="submit" value="Proceed"> <br>
+    </form>
+    
+    </section></section>
+
+    </main>
+
+
+
+    <footer></footer>
+</body>
+</body>
+
+</html>

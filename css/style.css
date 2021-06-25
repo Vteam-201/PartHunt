@@ -35,8 +35,6 @@ header {
   transition: all ease-in-out 550ms;
 
 }
-
-
 .sticky {
   position: sticky;
   top: 0;
@@ -301,7 +299,7 @@ main {
   text-decoration: none;
   margin-left: 20px;
   text-transform: uppercase;
-  border: 1px solid #164D62;
+  border: 1px solid #686a6b;
 }
 
 .cards article a:hover {
@@ -336,40 +334,93 @@ footer {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 3; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 100px;/*  Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(151, 137, 137, 0.4); /* Black w/ opacity */
+  font-family: 'Poppins', sans-serif;
+  box-shadow:10px 10px 5px #000
+  border: 1px solid #000;
  }
-
 
 /* Modal Content */
 .modal-content {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* grid-template-columns: 200px 1.5fr ; */
   width: 80%;
 }
+.modal-content img{
+  min-width: 200px;
+  min-height: 200px;
+  margin-right: 15px;
+
+}
+
 .modal-header {
-  background-color: #fefefe;
+  background: url('../res/parallax.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+
   width: 80%;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: 300px;
 }
 .modal-footer {
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+
   width: 80%;
+  height: 50px;
+
+}
+button {
+  float: right;
+  /* justify-content: center; */
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+button:hover{
+  background-color: #e7e7e7;
+}
+.interacte{
+  margin: auto;
+  width: 100%;
+  justify-content: space-between;
+  
 }
 
+/* .modal ul{
+  align-items: center;
+  width: 100%;
+  transition: 350ms;
+    padding: 20px 20px;
+}
+.modal ul li .ContentTitle {
+  display: inline-block;
+  margin: auto;
+  /* padding: 50px 20px; */
+  /* font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 600px; */
+/* } */
 /* The Close Button */
 .close {
   color: #aaaaaa;
@@ -384,6 +435,7 @@ footer {
   text-decoration: none;
   cursor: pointer;
 }
+
 
 .open-button {
   background-color: #A5A5A5;
@@ -491,5 +543,34 @@ a {color:#FF0000;}
   background: url('../res/parallax.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;}
+.modal-content p {
+  margin-left:15px;
+  font-size: 14px;
+
+
+}
+
+.modal-content p:nth-child(2) {
+  padding-top: 8px;
+  padding-right: 8px;
+  max-height: 200px;
+  min-height: 200px;
+  overflow:scroll;
+  margin-right: 2px;  text-indent: 10px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.modal-content ul li {
+  display: inline;
+  padding-left:30px;
+   
+
+}
+.modal-content ul li:before {
+  content: "• ";
+} 
+.modal-content ul{
+  list-style: circle;
+
 }

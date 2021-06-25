@@ -34,6 +34,10 @@
       <section class="about-paragraph">
 
       </section>
+      <section>
+      
+        
+      </section>
     </main>
     <footer>
       all right reserved &copy; 2021
@@ -42,12 +46,28 @@
   <div id="myModal" class="modal">
     <div class="modal-header">
       <span class="close">&times;</span>
-      <label id="modalTitle"></label>
+
+      <label id="modalTitle" class="modalTitle"></label>
     </div>
     <div id='modalContent' class="modal-content">
+         <div class="right">
+        <img src="" alt="company-logo" id="company-logo" width="200" height="200">
+      </div>
+      <div class="left">
+           <ul>
+          <li id="modalCategory"></li>
+          <li id="modalPayRate"></li>
+          <li id="modalShift" ></li>
+        </ul>
+           </div>
     </div>
-    <div class="modal-footer">
-      <p>Some text in the Modal..</p>
+     <div class="modal-footer">
+      <div class="interacte">
+     <button class="fa fa-thumbs-up"></button>
+      <button class="fa fa-share-alt"></button>
+      <button class='fas fa-comment-dots'></button>
+      <button>Apply</button>
+      </div>
     </div>
   </div>
   <div id="registerModal" class="modal">
@@ -77,6 +97,7 @@
       <button type="button" class="btn cancel" id="closeFormbtn">Close</button>
     </form>
   </div>
+
 
   <script src="https://kit.fontawesome.com/9e5d1913ca.js" crossorigin="anonymous"></script>
   <script src="./js/style.js"></script>
