@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +8,7 @@
   <link rel="shortcut icon" type="image/jpg" href="./res/logo.png" />
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  
 </head>
 
 <body>
@@ -46,22 +46,24 @@
   <div id="myModal" class="modal">
     <div class="modal-header">
       <span class="close">&times;</span>
-
       <label id="modalTitle" class="modalTitle"></label>
     </div>
     <div id='modalContent' class="modal-content">
-         <div class="right">
-        <img src="" alt="company-logo" id="company-logo" width="200" height="200">
+     
+      <img src="" alt="company-logo" id="company-logo" width="200" height="200">
+      <p id='jobDescription'></p>
+      <div style="display: flex;">
+       
       </div>
-      <div class="left">
-           <ul>
-          <li id="modalCategory"></li>
-          <li id="modalPayRate"></li>
-          <li id="modalShift" ></li>
-        </ul>
-           </div>
+    
     </div>
+  
      <div class="modal-footer">
+      <ul style="display: inline-flexbox">
+        <li id="modalCategory"></li>
+        <li id="modalPayRate"></li>
+        <li id="modalShift" ></li>
+      </ul>
       <div class="interacte">
      <button class="fa fa-thumbs-up"></button>
       <button class="fa fa-share-alt"></button>
@@ -70,6 +72,8 @@
       </div>
     </div>
   </div>
+
+
   <div id="registerModal" class="modal">
     <div class="modal-header">
       <span class="close" id='closeLoginRegform'>&times;</span>
@@ -90,18 +94,17 @@
     <form action="" class="form-container">
       <input type="text" placeholder="Enter Email" name="email" required>
       <input type="password" placeholder="Enter Password" name="psw" required>
-
       <button type="submit" class="btn" id="loginBtn">Login</button>
       keep me signed In.<input type="checkbox" ><br>
-      <span>Dont have an account ? <a href="#registerModal" id="registerLink">Register</a></span>
+      <span>Dont have an account ?</span> <a href="#registerModal" id="registerLink">Register</a>
       <button type="button" class="btn cancel" id="closeFormbtn">Close</button>
     </form>
   </div>
 
-
+  <script src="./js/app.js"></script>
   <script src="https://kit.fontawesome.com/9e5d1913ca.js" crossorigin="anonymous"></script>
   <script src="./js/style.js"></script>
-  <script src="./js/app.js"></script>
+
 </body>
 
 </html>
