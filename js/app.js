@@ -9,7 +9,6 @@
 const Posts = function ( newPosts ) {
   this.newPosts = newPosts;
 };
-
 Posts.prototype.addPost = function (
   id,
   companyID,
@@ -38,12 +37,26 @@ Posts.prototype.saveToLocalStorage = function () {
 Posts.prototype.removeItem = function ( post ) {
   this.newPosts.splice( post, 1 );
 };
-
 let cards = document.getElementById( 'indexMain' );
+
 Posts.prototype.append = function () {
+  let topTenSection = document.createElement( 'section' );
+  topTenSection.setAttribute( 'Class', 'cards' );
+  let latestPosts = this.newPosts.slice( ( 0 ), 3 );
+  document.getElementById( 'topcompaniesh2' ).innerHTML = '<h2 id=\'topcom\'>Top Companies </h2>';
+  for ( const i of latestPosts ) {
+    let div = document.createElement( 'div' );
+    div.innerHTML = `  
+    <a href="./pages/companyProfile.html?id=${i.id}"><img src="./res/${i.companyID}.jpg" alt=""></a> `;
+
+
+    topTenSection.appendChild( div );}
+  cards.appendChild( topTenSection );
+
   let section = document.createElement( 'section' );
   section.setAttribute( 'Class', 'cards' );
-  for ( const i of this.newPosts ) {
+  latestPosts = this.newPosts.slice( ( this.newPosts.length - 6 ), this.newPosts.length );
+  for ( const i of latestPosts ) {
     let article = document.createElement( 'article' );
     article.innerHTML = `  
        <img src="./res/${i.companyID}.jpg" alt="">
@@ -53,9 +66,7 @@ Posts.prototype.append = function () {
     section.appendChild( article );
   }
   cards.appendChild( section );
-
 };
-
 Posts.prototype.appendModalData = function ( id ) {
   for ( const i of this.newPosts ) {
     if ( i.id === id ) {
@@ -75,7 +86,6 @@ Posts.prototype.appendModalData = function ( id ) {
     }
   }
 };
-
 const NewPost = function (
   id,
   companyID,
@@ -95,7 +105,6 @@ const NewPost = function (
   this.payRate = payRate;
   this.companySrc = companySrc;
 };
-
 //initial Values
 const posts = new Posts( [] );
 posts.addPost(
@@ -126,102 +135,134 @@ Reporting skills Responsible for handling customers’ interactions Responsible 
 );
 posts.addPost(
   `${generateNewID( posts.newPosts )}`,
-  '1',
-  'Marketing officer',
-  `Responsible for handling customers’ interactions
-Responsible for communicating with customers’ via multiple channels
-Answer all incoming requests and address customers’ problems in a timely manner
-Log all necessary interaction details as instructed
-Re-direct requests as per the set processes and take full information as required
-Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues
-Escalate issues or unresolved queries to the Team Leader or Supervisor as directed
- 
-Skills
-The minimum requirements for this position are;
-Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic
-Excellent communication (written, verbal and listening skills) in both language
-Sales skill is a plus
-Ability to work alternating shifts, weekends and holidays based on business needs
-Basic customer service skills
-Problem solving and analytical thinking
-Reporting skills Responsible for handling customers’ interactions Responsible for communicating with customers’ via multiple channels Answer all incoming requests and address customers’ problems in a timely manner Log all necessary interaction details as instructed Re-direct requests as per the set processes and take full information as required Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues Escalate issues or unresolved queries to the Team Leader or Supervisor as directed Skills The minimum requirements for this position are; Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic Excellent communication (written, verbal and listening skills) in both language Sales skill is a plus Ability to work alternating shifts, weekends and holidays based on business needs Basic customer service skills Problem solving and analytical thinking Reporting skills`,
-  'Marketing',
-  'A',
-  '10JD/Hour',
-  '1.jpg'
-);
-posts.addPost(
-  `${generateNewID( posts.newPosts )}`,
-  '1',
-  'Marketing officer',
-  `Responsible for handling customers’ interactions
-Responsible for communicating with customers’ via multiple channels
-Answer all incoming requests and address customers’ problems in a timely manner
-Log all necessary interaction details as instructed
-Re-direct requests as per the set processes and take full information as required
-Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues
-Escalate issues or unresolved queries to the Team Leader or Supervisor as directed
- 
-Skills
-The minimum requirements for this position are;
-Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic
-Excellent communication (written, verbal and listening skills) in both language
-Sales skill is a plus
-Ability to work alternating shifts, weekends and holidays based on business needs
-Basic customer service skills
-Problem solving and analytical thinking
-Reporting skills Responsible for handling customers’ interactions Responsible for communicating with customers’ via multiple channels Answer all incoming requests and address customers’ problems in a timely manner Log all necessary interaction details as instructed Re-direct requests as per the set processes and take full information as required Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues Escalate issues or unresolved queries to the Team Leader or Supervisor as directed Skills The minimum requirements for this position are; Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic Excellent communication (written, verbal and listening skills) in both language Sales skill is a plus Ability to work alternating shifts, weekends and holidays based on business needs Basic customer service skills Problem solving and analytical thinking Reporting skills`,
-  'Marketing',
-  'A',
-  '10JD/Hour',
-  '1.jpg'
-);
-posts.addPost(
-  `${generateNewID( posts.newPosts )}`,
-  '1',
-  'Marketing officer',
-  `Responsible for handling customers’ interactions
-Responsible for communicating with customers’ via multiple channels
-Answer all incoming requests and address customers’ problems in a timely manner
-Log all necessary interaction details as instructed
-Re-direct requests as per the set processes and take full information as required
-Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues
-Escalate issues or unresolved queries to the Team Leader or Supervisor as directed
- 
-Skills
-The minimum requirements for this position are;
-Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic
-Excellent communication (written, verbal and listening skills) in both language
-Sales skill is a plus
-Ability to work alternating shifts, weekends and holidays based on business needs
-Basic customer service skills
-Problem solving and analytical thinking
-Reporting skills Responsible for handling customers’ interactions Responsible for communicating with customers’ via multiple channels Answer all incoming requests and address customers’ problems in a timely manner Log all necessary interaction details as instructed Re-direct requests as per the set processes and take full information as required Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues Escalate issues or unresolved queries to the Team Leader or Supervisor as directed Skills The minimum requirements for this position are; Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic Excellent communication (written, verbal and listening skills) in both language Sales skill is a plus Ability to work alternating shifts, weekends and holidays based on business needs Basic customer service skills Problem solving and analytical thinking Reporting skills`,
-  'Marketing',
-  'A',
-  '10JD/Hour',
-  '1.jpg'
-);
-posts.addPost(
-  `${generateNewID( posts.newPosts )}`,
   '2',
-  'Accountant',
-  'The Senior Communications Coordinator, will lead a dynamic and multi-faceted communications portfolio for the Mercy Corps Syria office. S/he will work closely with the Syria team in developing and disseminating internal and external communications products. The Senior Communications Coordinator will design new internal and external communications strategies, tools, products and deliverables and will conceptualize strategies for visualizing/conveying information to a wide variety of internal audiences including Mercy Corps globally. S/he will ensure that teams adhere to all Mercy Corps’ and donors’ branding and visibility policies and procedures. The Senior Internal Communications Coordinator will provide critical coordination in the communication & information flow for the COVID-19 response. The Senior Communications Coordinator will report to the Grants Management Director while working closely with senior leadership.',
-  'Accounting',
-  'C',
-  '7JD/Hour',
+  'ICT Support',
+  `Responsible for handling customers’ interactions
+Responsible for communicating with customers’ via multiple channels
+Answer all incoming requests and address customers’ problems in a timely manner
+Log all necessary interaction details as instructed
+Re-direct requests as per the set processes and take full information as required
+Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues
+Escalate issues or unresolved queries to the Team Leader or Supervisor as directed
+ 
+Skills
+The minimum requirements for this position are;
+Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic
+Excellent communication (written, verbal and listening skills) in both language
+Sales skill is a plus
+Ability to work alternating shifts, weekends and holidays based on business needs
+Basic customer service skills
+Problem solving and analytical thinking
+Reporting skills Responsible for handling customers’ interactions Responsible for communicating with customers’ via multiple channels Answer all incoming requests and address customers’ problems in a timely manner Log all necessary interaction details as instructed Re-direct requests as per the set processes and take full information as required Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues Escalate issues or unresolved queries to the Team Leader or Supervisor as directed Skills The minimum requirements for this position are; Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic Excellent communication (written, verbal and listening skills) in both language Sales skill is a plus Ability to work alternating shifts, weekends and holidays based on business needs Basic customer service skills Problem solving and analytical thinking Reporting skills`,
+  'Marketing',
+  'A',
+  '9JD/Hour',
   '2.jpg'
 );
 posts.addPost(
   `${generateNewID( posts.newPosts )}`,
   '3',
+  'Technology officer',
+  `Responsible for handling customers’ interactions
+Responsible for communicating with customers’ via multiple channels
+Answer all incoming requests and address customers’ problems in a timely manner
+Log all necessary interaction details as instructed
+Re-direct requests as per the set processes and take full information as required
+Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues
+Escalate issues or unresolved queries to the Team Leader or Supervisor as directed
+ 
+Skills
+The minimum requirements for this position are;
+Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic
+Excellent communication (written, verbal and listening skills) in both language
+Sales skill is a plus
+Ability to work alternating shifts, weekends and holidays based on business needs
+Basic customer service skills
+Problem solving and analytical thinking
+Reporting skills Responsible for handling customers’ interactions Responsible for communicating with customers’ via multiple channels Answer all incoming requests and address customers’ problems in a timely manner Log all necessary interaction details as instructed Re-direct requests as per the set processes and take full information as required Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues Escalate issues or unresolved queries to the Team Leader or Supervisor as directed Skills The minimum requirements for this position are; Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic Excellent communication (written, verbal and listening skills) in both language Sales skill is a plus Ability to work alternating shifts, weekends and holidays based on business needs Basic customer service skills Problem solving and analytical thinking Reporting skills`,
+  'Marketing',
+  'A',
+  '5JD/Hour',
+  '3.jpg'
+);
+posts.addPost(
+  `${generateNewID( posts.newPosts )}`,
+  '4',
+  'Customer Service Advisor',
+  'The Senior Communications Coordinator, will lead a dynamic and multi-faceted communications portfolio for the Mercy Corps Syria office. S/he will work closely with the Syria team in developing and disseminating internal and external communications products. The Senior Communications Coordinator will design new internal and external communications strategies, tools, products and deliverables and will conceptualize strategies for visualizing/conveying information to a wide variety of internal audiences including Mercy Corps globally. S/he will ensure that teams adhere to all Mercy Corps’ and donors’ branding and visibility policies and procedures. The Senior Internal Communications Coordinator will provide critical coordination in the communication & information flow for the COVID-19 response. The Senior Communications Coordinator will report to the Grants Management Director while working closely with senior leadership.',
+  'Sales and Marketing',
+  'A',
+  '7JD/Hour',
+  '4.jpg'
+);
+posts.addPost(
+  `${generateNewID( posts.newPosts )}`,
+  '5',
+  'Office assistant',
+  `Responsible for handling customers’ interactions
+Responsible for communicating with customers’ via multiple channels
+Answer all incoming requests and address customers’ problems in a timely manner
+Log all necessary interaction details as instructed
+Re-direct requests as per the set processes and take full information as required
+Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues
+Escalate issues or unresolved queries to the Team Leader or Supervisor as directed
+ 
+Skills
+The minimum requirements for this position are;
+Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic
+Excellent communication (written, verbal and listening skills) in both language
+Sales skill is a plus
+Ability to work alternating shifts, weekends and holidays based on business needs
+Basic customer service skills
+Problem solving and analytical thinking
+Reporting skills Responsible for handling customers’ interactions Responsible for communicating with customers’ via multiple channels Answer all incoming requests and address customers’ problems in a timely manner Log all necessary interaction details as instructed Re-direct requests as per the set processes and take full information as required Follow company procedures when handling incoming and outgoing interactions with the ability to resolve and close issues Escalate issues or unresolved queries to the Team Leader or Supervisor as directed Skills The minimum requirements for this position are; Candidate must be fluent in English (at least level B2 or preferably C1/C2) and Arabic Excellent communication (written, verbal and listening skills) in both language Sales skill is a plus Ability to work alternating shifts, weekends and holidays based on business needs Basic customer service skills Problem solving and analytical thinking Reporting skills`,
+  'Marketing',
+  'A',
+  '17 JD/Hour',
+  '5.jpg'
+);
+posts.addPost(
+  `${generateNewID( posts.newPosts )}`,
+  '6',
+  'Accountant',
+  'The Senior Communications Coordinator, will lead a dynamic and multi-faceted communications portfolio for the Mercy Corps Syria office. S/he will work closely with the Syria team in developing and disseminating internal and external communications products. The Senior Communications Coordinator will design new internal and external communications strategies, tools, products and deliverables and will conceptualize strategies for visualizing/conveying information to a wide variety of internal audiences including Mercy Corps globally. S/he will ensure that teams adhere to all Mercy Corps’ and donors’ branding and visibility policies and procedures. The Senior Internal Communications Coordinator will provide critical coordination in the communication & information flow for the COVID-19 response. The Senior Communications Coordinator will report to the Grants Management Director while working closely with senior leadership.',
+  'Accounting',
+  'C',
+  '7JD/Hour',
+  '6.jpg'
+);
+posts.addPost(
+  `${generateNewID( posts.newPosts )}`,
+  '7',
   'Customer Service Advisor',
   'The Senior Communications Coordinator, will lead a dynamic and multi-faceted communications portfolio for the Mercy Corps Syria office. S/he will work closely with the Syria team in developing and disseminating internal and external communications products. The Senior Communications Coordinator will design new internal and external communications strategies, tools, products and deliverables and will conceptualize strategies for visualizing/conveying information to a wide variety of internal audiences including Mercy Corps globally. S/he will ensure that teams adhere to all Mercy Corps’ and donors’ branding and visibility policies and procedures. The Senior Internal Communications Coordinator will provide critical coordination in the communication & information flow for the COVID-19 response. The Senior Communications Coordinator will report to the Grants Management Director while working closely with senior leadership.',
   'Sales and Marketing',
   'A',
   '10JD/Hour',
-  '3.jpg'
+  '7.jpg'
 );
+posts.addPost(
+  `${generateNewID( posts.newPosts )}`,
+  '8',
+  'SQL Developer',
+  'The Senior Communications Coordinator, will lead a dynamic and multi-faceted communications portfolio for the Mercy Corps Syria office. S/he will work closely with the Syria team in developing and disseminating internal and external communications products. The Senior Communications Coordinator will design new internal and external communications strategies, tools, products and deliverables and will conceptualize strategies for visualizing/conveying information to a wide variety of internal audiences including Mercy Corps globally. S/he will ensure that teams adhere to all Mercy Corps’ and donors’ branding and visibility policies and procedures. The Senior Internal Communications Coordinator will provide critical coordination in the communication & information flow for the COVID-19 response. The Senior Communications Coordinator will report to the Grants Management Director while working closely with senior leadership.',
+  'Sales and Marketing',
+  'A',
+  '7JD/Hour',
+  '8.jpg'
+);
+posts.addPost(
+  `${generateNewID( posts.newPosts )}`,
+  '9',
+  'Software Engineer',
+  'The Senior Communications Coordinator, will lead a dynamic and multi-faceted communications portfolio for the Mercy Corps Syria office. S/he will work closely with the Syria team in developing and disseminating internal and external communications products. The Senior Communications Coordinator will design new internal and external communications strategies, tools, products and deliverables and will conceptualize strategies for visualizing/conveying information to a wide variety of internal audiences including Mercy Corps globally. S/he will ensure that teams adhere to all Mercy Corps’ and donors’ branding and visibility policies and procedures. The Senior Internal Communications Coordinator will provide critical coordination in the communication & information flow for the COVID-19 response. The Senior Communications Coordinator will report to the Grants Management Director while working closely with senior leadership.',
+  'Sales and Marketing',
+  'A',
+  '5JD/Hour',
+  '9.jpg'
+);
+
+
 
 posts.saveToLocalStorage();
 
