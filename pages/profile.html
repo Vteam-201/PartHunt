@@ -1,274 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Profile</title>
-    <link rel="shortcut icon" type="image/jpg" href="./res/logo.png" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
-  <body>
-    <section class="container">
-      <header id="myHeader">
-        <img src="../res/logooooo.png" alt="" />
-        <nav>
-          <a href="../index.html" class="active">Home</a>
-          <a href="../pages/jobs.html">jobs</a>
-          <!-- <a href="">Resources</a> -->
-          <!-- <a href="">Blog</a> -->
-        </nav>
-      </header>
-      <main>
-        <section class="parallax-section">
-          <h2>Part Hunt</h2>
-          <p>More Time More Cash</p>
-        </section>
 
-        <section class="companyProfile">
-          <center><h2 id="name"></h2></center>
-          <center>
-            <div>
-              <p id="datemin">22 years</p>
-              <p id="currentStatus">Part-time employee</p>
-            </div>
-          </center>
-          <center>
-            <img
-              src="/res/defualtUser.jpg"
-              alt="userProfile"
-              id="userProfile"
-            />
-          </center>
-          <section class="edit-profile-btn">
-            <!-- <label for="edit">Edit Company Profile</label> -->
-            <button
-              id="editProfileBtn"
-              type="button"
-              style="font-size: 24px; margin-bottom: 50px; margin-right: 20px"
-            >
-              Edit Your Profile <i class="fas fa-edit"></i>
-            </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile</title>
+  <link rel="shortcut icon" type="image/jpg" href="./res/logo.png" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/countries.js"></script>
+</head>
 
-            <button style="font-size: 24px; margin-bottom: 50px; margin-right: 20px" >
+<body>
+  <section class="container">
+    <header id="myHeader">
+      <img src="../res/logooooo.png" alt="" />
+      <nav>
+        <a href="../index.html" class="active">Home</a>
+        <a href="../pages/jobs.html">jobs</a>
+        <!-- <a href="">Resources</a> -->
+        <!-- <a href="">Blog</a> -->
+      </nav>
+    </header>
+    <main>
+      <section class="parallax-section">
+        <h2>Part Hunt</h2>
+        <p>More Time More Cash</p>
+      </section>
+
+      <section class="companyProfile">
+        <center>
+          <h2 id="name"></h2>
+        </center>
+        <center>
+          <div>
+            <p id="datemin">22 years</p>
+            <p id="currentStatus">Part-time employee</p>
+          </div>
+        </center>
+        <center>
+          <img src="" alt="userProfile" id="userProfile" />
+        </center>
+        <section class="edit-profile-btn">
+          <!-- <label for="edit">Edit Company Profile</label> -->
+          <button id="editProfileBtn" type="button" style="font-size: 24px; margin-bottom: 50px; margin-right: 20px">
+            Edit Your Profile <i class="fas fa-edit"></i>
+          </button>
+
+          <!-- <button style="font-size: 24px; margin-bottom: 50px; margin-right: 20px" >
               <a href="../pages/register.html">Create Company Page</a>
                <i class="Viewccompany"></i>
-            </button>
-          </section>
+            </button> -->
         </section>
-        <section class="info">
-          <section class="industry-and-specialties">
-            <div>
-              <h3 id="education">EDUCATION</h3>
-              <ul>
-                <li>Bachelor</li>
-                <li>Currently studying</li>
-                <li id="edu"></li>
-              </ul>
-            </div>
-            <div>
-              <h3 id="PART-TIMESHIFT">PART-TIME SHIFT</h3>
-              <ul>
-                <li>Night</li>
-                <li id="shift"></li>
-              </ul>
-            </div>
-            <div>
-              <img src="../res/note.png" alt="" />
-              <!-- <i class="glyphicon glyphicon-user" style="color: rgb(44, 44, 116);"></i> -->
-              <p><a href="../pages/jobs.html">Latest Posts</a></p>
-            </div>
-          </section>
-          <section class="contact-info">
-            <div>
-              <img src="../res/email (1).png" alt="" />
-              <!-- <i class="glyphicon glyphicon-user" style="color: rgb(44, 44, 116);"></i> -->
-              <p id="email"><a href="#" id="email"></a></p>
-            </div>
-            <div>
-              <img src="../res/map-marker.png" alt="location" />
-              <p id="widget"><a href="#" id="location"></a></p>
-            </div>
-            <div>
-              <img src="../res/phone.png" alt="" />
-              <p id="phoneNumber"><a href="" id="phone"></a></p>
-            </div>
-          </section>
+      </section>
+      <section class="info">
+        <section class="industry-and-specialties">
+          <div>
+            <h3 id="education">EDUCATION</h3>
+            <ul>
+              <li>Bachelor</li>
+              <li>Currently studying</li>
+              <li id="edu"></li>
+            </ul>
+          </div>
+          <div>
+            <h3 id="PART-TIMESHIFT">PART-TIME SHIFT</h3>
+            <ul>
+              <li>Night</li>
+              <li id="shift"></li>
+            </ul>
+          </div>
+          <div>
+            <img src="../res/note.png" alt="" />
+            <!-- <i class="glyphicon glyphicon-user" style="color: rgb(44, 44, 116);"></i> -->
+            <p><a href="../pages/jobs.html">Latest Jobs</a></p>
+          </div>
         </section>
-      </main>
-      <!-- *********************************edit modal*************************** -->
-      <div id="myModal" class="modal">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <label id="modalTitle" class="modalTitle"></label>
-        </div>
-        <div id="modalContent" class="modal-content">
-          <div id="editUserProfile">
-            <input
-              type="name"
-              name="name"
-              id="name"
-              placeholder="Name"
-              autocomplete="on"
-              required
-            />
-            <input
-              type="surname"
-              name="surname"
-              id="surname"
-              placeholder="Surname"
-              autocomplete="on"
-              required
-            />
-            <select name="GENDER" id="GENDER" form="GENDERform">
-              <option value="GENDER ">GENDER</option>
-              <option value="MALE ">MALE</option>
-              <option value="FEMALE ">FEMALE</option>
-              <label for="datemin"> DATE OF BIRTH: </label>
-            </select>
-            <input type="date" id="datemin" name="datemin" min="2000-01-01" />
-            <input
-              type="name"
-              name="Nationality "
-              id="Nationality "
-              placeholder="Nationality "
-              autocomplete="on"
-              required
-            />
-            <label for="Studying"> Studying</label>
-            <input
-              type="checkbox"
-              id="  Studying"
-              name="  Studying"
-              value="Studying"
-            />
-            <select name="EDUCATION" id="EDUCATION" form="eduform">
-              <option value="EDUCATIONEDUCATION ">EDUCATION</option>
-              <option value="secondary">Secondary</option>
-              <option value="bachelor ">Bachelor</option>
-              <option value="masters ">Masters</option>
-            </select>
-            <div class="multiselect">
-              <div class="selectBox" onclick="showCheckboxes()">
-                <div class="overSelect"></div>
-              </div>
-              <div id="checkboxes">
-                <label for="">Languages</label>
-                <label for="one">
-                  <input type="checkbox" id="one" /> Arabic</label
-                >
-                <label for="two">
-                  <input type="checkbox" id="two" />English</label
-                >
-                <label for="three">
-                  <input type="checkbox" id="three" />Spanish</label
-                >
-                <label for="four">
-                  <input type="checkbox" id="four" />French</label
-                >
-                <label for="five">
-                  <input type="checkbox" id="five" />Chinese</label
-                >
-              </div>
+        <section class="contact-info">
+          <div>
+            <img src="../res/email (1).png" alt="" />
+            <!-- <i class="glyphicon glyphicon-user" style="color: rgb(44, 44, 116);"></i> -->
+            <p id="email"><a href="#" id="email"></a></p>
+          </div>
+          <div>
+            <img src="../res/map-marker.png" alt="location" />
+            <p id="widget"><a href="#" id="location"></a></p>
+          </div>
+          <div>
+            <img src="../res/phone.png" alt="" />
+            <p id="phoneNumber"><a href="" id="phone"></a></p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- *********************************edit modal*************************** -->
+    <div id="myModal" class="modal">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <label id="modalTitle" class="modalTitle"></label>
+      </div>
+      <div id="modalContent" class="modal-content">
+        <div id="editUserProfile">
+          <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required />
+          <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required />
+          <select name="GENDER" id="GENDER" form="GENDERform">
+            <option value="GENDER ">GENDER</option>
+            <option value="MALE ">MALE</option>
+            <option value="FEMALE ">FEMALE</option>
+            <label for="datemin"> DATE OF BIRTH: </label>
+          </select>
+          <input type="date" id="datemin" name="datemin" min="2000-01-01" />
+          <input type="name" name="Nationality " id="Nationality " placeholder="Nationality " autocomplete="on"
+            required />
+          <label for="Studying"> Studying</label>
+          <input type="checkbox" id="  Studying" name="  Studying" value="Studying" />
+          <select name="EDUCATION" id="EDUCATION" form="eduform">
+            <option value="EDUCATIONEDUCATION ">EDUCATION</option>
+            <option value="secondary">Secondary</option>
+            <option value="bachelor ">Bachelor</option>
+            <option value="masters ">Masters</option>
+          </select>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes()">
+              <div class="overSelect"></div>
             </div>
+            <div id="checkboxes">
+              <label for="">Languages</label>
+              <label for="one">
+                <input type="checkbox" id="one" /> Arabic</label>
+              <label for="two">
+                <input type="checkbox" id="two" />English</label>
+              <label for="three">
+                <input type="checkbox" id="three" />Spanish</label>
+              <label for="four">
+                <input type="checkbox" id="four" />French</label>
+              <label for="five">
+                <input type="checkbox" id="five" />Chinese</label>
+            </div>
+          </div>
+          <br />
+          <select name="PART-TIME SHIFT" id="PART-TIME SHIFT" form="shiftform">
+            <option value="PART-TIME SHIFT ">PART-TIME SHIFT</option>
             <br />
-            <select
-              name="PART-TIME SHIFT"
-              id="PART-TIME SHIFT"
-              form="shiftform"
-            >
-              <option value="PART-TIME SHIFT ">PART-TIME SHIFT</option>
-              <br />
-              <option value="Early morning ">Early morning</option>
-              <br />
-              <option value="Late  morning ">Morning</option>
-              <br />
-              <option value="Evening  ">Evening</option>
-              <br />
-              <option value="Night ">Night</option>
-              <br />
+            <option value="Early morning ">Early morning</option>
+            <br />
+            <option value="Late  morning ">Morning</option>
+            <br />
+            <option value="Evening  ">Evening</option>
+            <br />
+            <option value="Night ">Night</option>
+            <br />
+          </select>
+          <div id="widget">
+
+            Region <select onchange="set_country(this,country,city_state)" size="1" name="">
+              <option value="" selected="selected">Middle East</option>
+              <option value=""></option>
+              <script type="text/javascript">
+                setRegions(this);
+              </script>
+              <option value="Africa">Africa</option>
+              <option value="Antarctica">Antarctica</option>
+              <option value="Asia">Asia</option>
+              <option value="Australia/Oceania">Australia/Oceania</option>
+              <option value="Caribbean">Caribbean</option>
+              <option value="Central America">Central America</option>
+              <option value="Europe">Europe</option>
+              <option value="Islands">Islands</option>
+              <option value="Middle East">Middle East</option>
+              <option value="North America">North America</option>
+              <option value="South America">South America</option>
             </select>
-            <div id="widget">
-        
-              Region <select onchange="set_country(this,country,city_state)" size="1" name="">
-                  <option value="" selected="selected">Middle East</option>
-                  <option value=""></option>
-                  <script type="text/javascript">
-                      setRegions(this);
-                  </script><option value="Africa">Africa</option><option value="Antarctica">Antarctica</option><option value="Asia">Asia</option><option value="Australia/Oceania">Australia/Oceania</option><option value="Caribbean">Caribbean</option><option value="Central America">Central America</option><option value="Europe">Europe</option><option value="Islands">Islands</option><option value="Middle East">Middle East</option><option value="North America">North America</option><option value="South America">South America</option>
-              </select>
-              Country <select name="country" size="1" onchange="set_city_state(this,city_state)">
-                  
-              <option value="">SELECT COUNTRY</option><option value=""></option><option value="Bermuda">Bermuda</option><option value="Canada">Canada</option><option value="Greenland">Greenland</option><option value="Mexico">Mexico</option><option value="United States">United States</option></select>
-              City/State <select name="city_state" size="1" onchange="print_city_state(country,this)"><option value="">SELECT CITY</option><option value=""></option><option value="Hamilton">Hamilton</option><option value=""></option><option value="Devonshire">Devonshire</option><option value="Hamilton">Hamilton</option><option value="Hamilton">Hamilton</option><option value="Paget">Paget</option><option value="Pembroke">Pembroke</option><option value="Saint George">Saint George</option><option value="Saint George s">Saint George s</option><option value="Sandys">Sandys</option><option value="Smith s">Smith s</option><option value="Southampton">Southampton</option><option value="Warwick">Warwick</option></select>
-          
-          <div id="txtregion"></div>
-          <div id="txtplacename"></div>
+            Country <select name="country" size="1" onchange="set_city_state(this,city_state)">
+
+              <option value="">SELECT COUNTRY</option>
+              <option value=""></option>
+              <option value="Bermuda">Bermuda</option>
+              <option value="Canada">Canada</option>
+              <option value="Greenland">Greenland</option>
+              <option value="Mexico">Mexico</option>
+              <option value="United States">United States</option>
+            </select>
+            City/State <select name="city_state" size="1" onchange="print_city_state(country,this)">
+              <option value="">SELECT CITY</option>
+              <option value=""></option>
+              <option value="Hamilton">Hamilton</option>
+              <option value=""></option>
+              <option value="Devonshire">Devonshire</option>
+              <option value="Hamilton">Hamilton</option>
+              <option value="Hamilton">Hamilton</option>
+              <option value="Paget">Paget</option>
+              <option value="Pembroke">Pembroke</option>
+              <option value="Saint George">Saint George</option>
+              <option value="Saint George s">Saint George s</option>
+              <option value="Sandys">Sandys</option>
+              <option value="Smith s">Smith s</option>
+              <option value="Southampton">Southampton</option>
+              <option value="Warwick">Warwick</option>
+            </select>
+
+            <div id="txtregion"></div>
+            <div id="txtplacename"></div>
+          </div>
+        </div>
       </div>
-          </div>
-        </div>
-        <div class="modal-footer"></div>
+      <div class="modal-footer"></div>
+    </div>
+    <!-- ********************************************************************* -->
+    <section></section>
+
+    <button type="button" class="open-button cancel" id="openNewFormbtn">logout</button>
+    <div class="form-popup" id="loginRegisterForm">
+      <form id="loggedIn" class="form-container">
+        <a href="pages/profile.html"><label type="text" id='userNameLbl'></label></a>
+        <button type="button" class="btn cancel" id="acclogOut">LogOut !</button>
+      </form>
+      <form id="loginReg" class="form-container">
+        <input type="text" placeholder="Enter Email" id="accountEmail" required>
+        <input type="password" placeholder="Enter Password" id="accountPassword" required>
+        keep me signed In.<input type="checkbox"><label id="registerLink">Register</label>
+        <button type="button" class="btn" id="loginBtn">Login</button>
+        <button type="button" class="btn cancel" id="closeFormbtn">Close</button>
+      </form>
+
+    </div>
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <img src="/res/logooooo.png" alt="" />
+        <p class="footer-links">
+          <a href="./pages/index.html" class="link-1">Home</a>
+
+          <a href="./pages/jobs.html">Jobs</a>
+
+
+        </p>
+
+        <p class="footer-company-name">V-Team -Part Hunt © 2021</p>
       </div>
-      <!-- ********************************************************************* -->
-      <section></section>
-      <footer class="footer-distributed">
-        <div class="footer-left">
-          <img src="/res/logooooo.png" alt="" />
-          <p class="footer-links">
-            <a href="./pages/index.html" class="link-1">Home</a>
 
-            <a href="./pages/jobs.html">Jobs</a>
+      <div class="footer-center">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Alyasmeen</span> Amman, Jordan</p>
+        </div>
 
-            
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+962.555.333.25</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="mailto:support@company.com">support@part_hunt.net</a>
           </p>
-
-          <p class="footer-company-name">V-Team -Part Hunt © 2021</p>
         </div>
+      </div>
 
-        <div class="footer-center">
-          <div>
-            <i class="fa fa-map-marker"></i>
-            <p><span>Alyasmeen</span> Amman, Jordan</p>
-          </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About Part Hunt</span>
+          A platform that collects part-time jobs in Jordan to help university
+          students and job seekers find work, invest their time and earn an
+          income
+        </p>
 
-          <div>
-            <i class="fa fa-phone"></i>
-            <p>+962.555.333.25</p>
-          </div>
-
-          <div>
-            <i class="fa fa-envelope"></i>
-            <p>
-              <a href="mailto:support@company.com">support@part_hunt.net</a>
-            </p>
-          </div>
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
         </div>
+      </div>
+    </footer>
+  </section>
+  <script src="../js/style.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/user.js"></script>
 
-        <div class="footer-right">
-          <p class="footer-company-about">
-            <span>About Part Hunt</span>
-            A platform that collects part-time jobs in Jordan to help university
-            students and job seekers find work, invest their time and earn an
-            income
-          </p>
+  <script src="https://kit.fontawesome.com/9e5d1913ca.js" crossorigin="anonymous"></script>
+</body>
 
-          <div class="footer-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
-          </div>
-        </div>
-      </footer>
-    </section>
-    <script src="../js/style.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/user.js"></script>
-    <script src="../js/countries.js"></script>
-    <script
-      src="https://kit.fontawesome.com/9e5d1913ca.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>
