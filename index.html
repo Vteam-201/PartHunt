@@ -18,9 +18,12 @@
     <header id="myHeader">
       <img src="../res/logooooo.png" alt="">
       <nav>
-        <a href="index.html" class='active'>Home</a>
-        <a href="./pages/jobs.html">Jobs</a>
-        <!-- <a href="">Resources</a> -->
+        <a href="index.html" >Home</a>
+        <a href="../pages/jobs.html">Jobs</a>
+        <a href="../pages/post.html">Post a Job</a>
+        <a href="./pages/jobrequest.html">ٌRequest a Job</a>
+        <a href="../pages/aboutus.html">About us</a>
+        
         <!-- <a href="">Blog</a> -->
       </nav>
       <nav>
@@ -38,30 +41,10 @@
       </section>
       <section class="cards">
       </section>
-      <section class="about-paragraph">
-
+      <section id="topcompaniesh2" class="about-paragraph">
       </section>
-      <section>
-
         <article>
-          <h2>top ten companies </h2>
-        </article>
-        <section class="top-ten-compenies">
-          <div>
-            <img src="./res/1.jpg" alt="">
-            <a href="./pages/companyProfile.html">Profile</a>
-          </div>
-          <div>
-            <img src="./res/2.jpg" alt="">
-            <a href="./pages/companyProfile.html">Profile</a>
-          </div>
-          <div>
-            <img src="./res/3.jpg" alt="">
-            <a href="./pages/companyProfile.html">Profile</a>
-          </div>
-        </section>
-        <article>
-          <h2>latest posts </h2>
+         
         </article>
         <section class="cards">
         </section>
@@ -76,8 +59,9 @@
         <img src="./res/logooooo.png" alt="">
         <p class="footer-links">
           <a href="#" class="link-1">Home</a>
-
           <a href="./pages/jobs.html">Jobs</a>
+          <a href="../pages/post.html">Post a Job</a>
+          <a href="../pages/aboutus.html">About us</a>
 
         </p>
 
@@ -144,9 +128,8 @@
       <div class="interacte">
 
         <button id='likesLabel' value='' class="fa fa-thumbs-up"></button>
-        <button class="fa fa-share-alt"></button>
-        <button class='fas fa-comment-dots'></button>
-        <button type="button" id="applyBtn">Apply</button>
+
+        <button type="button" id="applyBtn"><a href="./pages/jobs.html" style="text-decoration: none;">Go to jobs</a> </button>
       </div>
     </div>
   </div>
@@ -158,8 +141,8 @@
     </div>
     <div class="modal-content" style="height: 600px;">
       <div id="chooseAccountTypeBtns" class="chooseAccountTypeBtns">
-        <button type="button" value="1" id="regUserAccount">User Account</button>
-        <button type="button" value="2" id="regCompanyAccount">Company Account</button>
+        <button type="button" value="1" id="regUserAccount" hidden>User Account</button>
+      <button type="button" value="2" id="regCompanyAccount" hidden>Company Account</button> 
       </div>
       <form id="ReguserForm">
         <div class='jobSeekerRegForm'>
