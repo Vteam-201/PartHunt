@@ -261,7 +261,6 @@ function likeBtnClicked(){
 }
 function checkLikes( id ){
   for ( let i = 0 ; i < likes.newLikes.length ; i++ ) {
-
     if ( likes.newLikes[i].userID === currentuserArr.id && likes.newLikes[i].postID === id ){
       likesbtn.style.color = '#0798CF';
       return [true,likes.newLikes.indexOf( likes.newLikes[i] )];
