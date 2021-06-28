@@ -5,114 +5,169 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./mosa.css">
+    <!-- <link rel="stylesheet" href="./mosa.css"> -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/substyle.css">
+    <script type="text/javascript" src="../js/countries.js"></script>
    
 </head>
 <body>
+  <section class="container">
+    <header id="myHeader">
+      <img src="../res/logooooo.png" alt="">
+      <nav>
+        <a href="index.html" class='active'>Home</a>
+        <a href="./pages/jobs.html">Jobs</a>
+        <!-- <a href="">Resources</a> -->
+        <!-- <a href="">Blog</a> -->
+      </nav>
+      <nav>
+      </nav>
+    </header>
+    <main id="indexMain">
+      <section class="parallax-section">
+        <h2>Part Hunt</h2>
+        <p>More Time More Cash</p> <br>
+        <h3> Find the work that suits you </h3><br>
+        <p> We are so glad you'er here! you'er now part of our ever growing community of people who want to make their
+          lives better via Part hunt.</p><br>
+        <p>Whether you've Joined to find the dream job or looking for opportunities we've got somthing for you. </p>
+        <br></div>
+      </section>
     <h2>Company Register</h2><br>
- <form id="form" >  
-   
-<div >
-<input type="text" id="CompanyName" name="CompanyName" placeholder="Company Name">
-<input type="text" id="Website" name="Website" placeholder="Website"><br><br>
-<input type="number" id="Phone" name="Phone" placeholder="Phone">
-<input type="text" id="Address" name="Address" placeholder="Address"><br><br>
-<input type="number" id="Founded" name="Founded" placeholder="Founded"><br>
-</div> 
-<section id="a">
-<div>
-       <label  for="industry">Industry:</label><br>
-
-<select name="Industry" id="Industry">
-
-<option value="Agriculture ">Agriculture</option>
-<option value="Basic Metal Production">Basic Metal Production</option>
-<option value="Chemical industries ">Chemical industries </option>
-<option value="Commerce">Commerce</option>
-<option value="Construction">Construction</option>
-<option value="Education">Education</option>
-<option value="Financial services">Financial services</option>
-<option value="Food; drink; tobacco">Food; drink; tobacco</option>
-<option value="Forestry; wood; pulp and paper">Forestry; wood; pulp and paper</option>
-<option value="Health services">Health services</option>
-<option value="Hotels; tourism; catering ">Hotels; tourism; catering </option>
-<option value="Mining (coal; other mining)">Mining (coal; other mining)</option>
-<option value="Mechanical and electrical engineering">Mechanical and electrical engineering</option>
-<option value="Media; culture; graphical">Media; culture; graphical</option>
-<option value="Public service">Public service</option>
-<option value="Textiles; clothing; leather; footwear">Textiles; clothing; leather; footwear</option>
-<option value="Transport ">Transport </option>
-<option value="Utilities (water; gas; electricity)">Utilities (water; gas; electricity)</option>
-
-</select>
-</div>
-
-<div>
-    <label for="Company Specialties">Specialties:</label><br>
-<select name="Specialties" id="Specialties">
-
-    <option value="Lead Generation">Lead Generation</option>
-    <option value=" Content Marketing"> Content Marketing</option>
-    <option value="Digital Marketing">Digital Marketing</option>
-    <option value="Marketing Automation">Marketing Automation</option>
-    <option value="Sales Enablement">Sales Enablement</option>
-    </select>
-</div>
-
-</section>
-<section id="b">
-    <div>
-      
+ 
+    <form id="regCompanyForm" class="form-inline">
+        <div id="regComForm">
+            <section class="input">
+          <input type="text" id="companyName" class="a" name="CompanyName" placeholder="Company Name">
+          <input type="text" id="cWebsite" class="a" name="Website" placeholder="Website"><br><br>
+          <input type="number" id="cPhone" class="b" name="Phone" placeholder="Phone">
+          <input type="text" id="cEmail" class="b" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required=""><br><br>
+          <input type="number" id="cfoundedYear" name="Founded" placeholder="Founded">
+        </section>
+        <section class="select">
+            <section class="up">
+          <select name="Industry" id="cIndustry">
+            <option value="Industry ">Industry</option>
+            <option value="Agriculture ">Agriculture</option>
+            <option value="Basic Metal Production">Basic Metal Production</option>
+            <option value="Chemical industries ">Chemical industries </option>
+            <option value="Commerce">Commerce</option>
+            <option value="Construction">Construction</option>
+            <option value="Education">Education</option>
+            <option value="Financial services">Financial services</option>
+            <option value="Food; drink; tobacco">Food; drink; tobacco</option>
+            <option value="Forestry; wood; pulp and paper">Forestry; wood; pulp and paper</option>
+            <option value="Health services">Health services</option>
+            <option value="Hotels; tourism; catering ">Hotels; tourism; catering </option>
+            <option value="Mining (coal; other mining)">Mining (coal; other mining)</option>
+            <option value="Mechanical and electrical engineering">Mechanical and electrical engineering</option>
+            <option value="Media; culture; graphical">Media; culture; graphical</option>
+            <option value="Public service">Public service</option>
+            <option value="Textiles; clothing; leather; footwear">Textiles; clothing; leather; footwear</option>
+            <option value="Transport ">Transport </option>
+            <option value="Utilities (water; gas; electricity)">Utilities (water; gas; electricity)</option>
+          </select>
+          <select name="Specialties" id="cSpecialties">
+            <option value="Agriculture ">Specialties</option>
+            <option value="Lead Generation">Lead Generation</option>
+            <option value=" Content Marketing"> Content Marketing</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Marketing Automation">Marketing Automation</option>
+            <option value="Sales Enablement">Sales Enablement</option>
+          </select></section>
+          <section class="mid">
+          <select name="Type" id="cType">
+            <option value="Private Companies">company Type</option>
+            <option value="Private Companies">Private Companies</option>
+            <option value="Public Companies">Public Companies</option>
+            <option value="One Person Company">One Person Company</option>
+          </select>
+          <select name="Size" id="cSize">
+            <option value="1-50">company Size</option>
+            <option value="1-50">(1-50) Employee</option>
+            <option value="51-100">(51-100) Employee</option>
+            <option value="100-200">(100-200) Employee</option>
+            <option value="200-300">(200-300) Employee</option>
+            <option value="more than 300">(more than 300) Employee</option>
+          </select></section>
+          <select onchange="set_country(this,country,city_state)" size="1" name="region">
+            <option value="" selected="selected">Country</option>
+            <option value=""></option>
+            <script type="text/javascript">
+              setRegions(this);
+            </script>
+          </select>
+          <select name="country" size="1" disabled="disabled" onchange="set_city_state(this,city_state)"></select>
+          <select id="cCity" name="city_state" size="1" disabled="disabled"
+            onchange="print_city_state(country,this)"></select></section>
         
-
-        <label for="type of Company">Type:</label><br><select name="Type" id="Type"><br>
-<option value="Private Companies">Private Companies</option>
-<option value="Public Companies">Public Companies</option>
-<option value="One Person Company">One Person Company</option>
-
-</select>
-    </div>
-    <div>
-        <label for="size of Company">Size:</label><br>
-        
-        <select name="Size" id="Size">
-        <option value="1-50">(1-50) Employee</option>
-        <option value="51-100">(51-100) Employee</option>
-        <option value="100-200">(100-200) Employee</option>
-        <option value="200-300">(200-300) Employee</option>
-        <option value="more than 300">(more than 300) Employee</option>
-        </select>
-        </div><br>
-    </section>
-    <section id="c">
-    <div id="widget">
-        <form>
-        Region&raquo;<br>
-         <select onchange="set_country(this,country,city_state)" size="1" name="region">
-        <option value="" selected="selected">Country</option>
-        <option value=""></option>
-        <script type="text/javascript">
-        setRegions(this);
-        </script>
-        </select>
-        Country&raquo; <select name="country" size="1" disabled="disabled" onchange="set_city_state(this,city_state)"></select>
-        City/State&raquo; <select name="city_state" size="1" disabled="disabled" onchange="print_city_state(country,this)"></select>
-        </form>
-        <div id="txtregion"></div>
-        <div id="txtplacename"></div>
-        
-    <div>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-          Select image to upload:
-         <br> <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="submit" value="Submit" name="submit" id="regCompanyBtn">
         </div>
-    </section>
-   
+      </form>
+    </main>
+    <section></section>
+    <footer class="footer-distributed">
 
-     </form>  
-    
-     <script type="text/javascript" src="./mosa.js"></script>
+      <div class="footer-left">
+
+        <img src="./res/logooooo.png" alt="">
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+
+          <a href="#">Pool</a>
+
+          <a href="#">About</a>
+        </p>
+
+        <p class="footer-company-name">V-Team -Part Hunt © 2021</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Alyasmeen</span> Amman, Jordan</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+962.555.333.25</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@part_hunt.net</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About Part Hunt</span>
+          A platform that collects part-time jobs in Jordan to help university students and job seekers find work,
+          invest their time and earn an income
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
+    </footer>
+    </section>
+
+      <script src="../js/app.js"></script>
+      <script src="https://kit.fontawesome.com/9e5d1913ca.js" crossorigin="anonymous"></script>
+    <script src="../js/company.js"></script>
 </body>
 </html>

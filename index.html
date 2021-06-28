@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page- JobPool</title>
+  <title>Home Page- PartHunt</title>
   <link rel="shortcut icon" type="image/jpg" href="./res/logo.png" />
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
-  
+  <link rel="stylesheet" href="./css/substyle.css">
+  <script src="./js/countries.js"></script>
 </head>
 
 <body>
   <section class="container">
     <header id="myHeader">
-      <img src="./res/logo.png" alt="">
+      <img src="../res/logooooo.png" alt="">
       <nav>
         <a href="index.html" class='active'>Home</a>
-        <a href="./pages/pool.html">Pool</a>
+        <a href="./pages/jobs.html">Jobs</a>
         <!-- <a href="">Resources</a> -->
         <!-- <a href="">Blog</a> -->
       </nav>
       <nav>
       </nav>
     </header>
-    <main>
+    <main id="indexMain">
       <section class="parallax-section">
-        <h2>Job Pool</h2>
-        <p>Part-Time Jobs.</p>
+        <h2>Part Hunt</h2>
+        <p>More Time More Cash</p> <br>
+        <h3> Find the work that suits you </h3><br>
+        <p> We are so glad you'er here! you'er now part of our ever growing community of people who want to make their
+          lives better via Part hunt.</p><br>
+        <p>Whether you've Joined to find the dream job or looking for opportunities we've got somthing for you. </p>
+        <br></div>
       </section>
       <section class="cards">
       </section>
@@ -35,12 +42,87 @@
 
       </section>
       <section>
-      
-        
+
+        <article>
+          <h2>top ten companies </h2>
+        </article>
+        <section class="top-ten-compenies">
+          <div>
+            <img src="./res/1.jpg" alt="">
+            <a href="./pages/companyProfile.html">Profile</a>
+          </div>
+          <div>
+            <img src="./res/2.jpg" alt="">
+            <a href="./pages/companyProfile.html">Profile</a>
+          </div>
+          <div>
+            <img src="./res/3.jpg" alt="">
+            <a href="./pages/companyProfile.html">Profile</a>
+          </div>
+        </section>
+        <article>
+          <h2>latest posts </h2>
+        </article>
+        <section class="cards">
+        </section>
       </section>
+
     </main>
-    <footer>
-      all right reserved &copy; 2021
+    <section></section>
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <img src="./res/logooooo.png" alt="">
+        <p class="footer-links">
+          <a href="#" class="link-1">Home</a>
+
+          <a href="#">Pool</a>
+
+          <a href="#">About</a>
+        </p>
+
+        <p class="footer-company-name">V-Team -Part Hunt © 2021</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>Alyasmeen</span> Amman, Jordan</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+962.555.333.25</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@part_hunt.net</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>About Part Hunt</span>
+          A platform that collects part-time jobs in Jordan to help university students and job seekers find work,
+          invest their time and earn an income
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="./pages/profile.html"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+      </div>
+
     </footer>
   </section>
   <div id="myModal" class="modal">
@@ -49,58 +131,138 @@
       <label id="modalTitle" class="modalTitle"></label>
     </div>
     <div id='modalContent' class="modal-content">
-     
       <img src="" alt="company-logo" id="company-logo" width="200" height="200">
       <p id='jobDescription'></p>
       <div style="display: flex;">
-       
       </div>
-    
     </div>
-  
-     <div class="modal-footer">
+    <div class="modal-footer">
       <ul style="display: inline-flexbox">
         <li id="modalCategory"></li>
         <li id="modalPayRate"></li>
-        <li id="modalShift" ></li>
+        <li id="modalShift"></li>
       </ul>
       <div class="interacte">
-     <button class="fa fa-thumbs-up"></button>
-      <button class="fa fa-share-alt"></button>
-      <button class='fas fa-comment-dots'></button>
-      <button>Apply</button>
+
+        <button id='likesLabel' value='' class="fa fa-thumbs-up"></button>
+        <button class="fa fa-share-alt"></button>
+        <button class='fas fa-comment-dots'></button>
+        <button type="button" id="applyBtn">Apply</button>
       </div>
     </div>
   </div>
-
 
   <div id="registerModal" class="modal">
     <div class="modal-header">
       <span class="close" id='closeLoginRegform'>&times;</span>
       <label>Account Registration</label>
     </div>
-    <div class="modal-content">
-      <nav>
-        <a href="" id='jobSeekerReg'>Job Seeker</a>
-        <a href="" id='companyReg'>Company </a>
-      </nav>
-      <nav>
-      </nav>
+    <div class="modal-content" style="height: 600px;">
+      <div id="chooseAccountTypeBtns" class="chooseAccountTypeBtns">
+        <button type="button" value="1" id="regUserAccount">User Account</button>
+        <button type="button" value="2" id="regCompanyAccount">Company Account</button>
+      </div>
+      <form id="ReguserForm">
+        <div class='jobSeekerRegForm'>
+          <label>Register Job Seeker</label>
+          <button class="form-inline">
+            <input type="text" name="name" id="fName" placeholder="First Name" autocomplete="on" required>
+            <input type="text" name="Last name" id="lName" placeholder="Last name" autocomplete="on" required>
+            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+            <input type="number" name="Phone number" id="phone" placeholder="Phone number" autocomplete="on" required>
+            <input type="password" name="Enter a password" id="uPassword" placeholder="Enter a password"
+              autocomplete="on" required>
+            <input type="password" name="Confirm password" id="uCPassword" placeholder="Confirm password"
+              autocomplete="on" required>
+            <input type="submit" value="Submit" id="regUser">
+        </div>
+      </form>
+
+      <form id="regCompanyForm" class="form-inline">
+        <div id="regComForm">
+          <input type="text" id="companyName" name="CompanyName" placeholder="Company Name">
+          <input type="text" id="cWebsite" name="Website" placeholder="Website"><br><br>
+          <input type="number" id="cPhone" name="Phone" placeholder="Phone">
+          <input type="text" id="cEmail" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+          <input type="number" id="cfoundedYear" name="Founded" placeholder="Founded"><br>
+          <select name="Industry" id="cIndustry">
+            <option value="Industry ">Industry</option>
+            <option value="Agriculture ">Agriculture</option>
+            <option value="Basic Metal Production">Basic Metal Production</option>
+            <option value="Chemical industries ">Chemical industries </option>
+            <option value="Commerce">Commerce</option>
+            <option value="Construction">Construction</option>
+            <option value="Education">Education</option>
+            <option value="Financial services">Financial services</option>
+            <option value="Food; drink; tobacco">Food; drink; tobacco</option>
+            <option value="Forestry; wood; pulp and paper">Forestry; wood; pulp and paper</option>
+            <option value="Health services">Health services</option>
+            <option value="Hotels; tourism; catering ">Hotels; tourism; catering </option>
+            <option value="Mining (coal; other mining)">Mining (coal; other mining)</option>
+            <option value="Mechanical and electrical engineering">Mechanical and electrical engineering</option>
+            <option value="Media; culture; graphical">Media; culture; graphical</option>
+            <option value="Public service">Public service</option>
+            <option value="Textiles; clothing; leather; footwear">Textiles; clothing; leather; footwear</option>
+            <option value="Transport ">Transport </option>
+            <option value="Utilities (water; gas; electricity)">Utilities (water; gas; electricity)</option>
+          </select>
+          <select name="Specialties" id="cSpecialties">
+            <option value="Agriculture ">Specialties</option>
+            <option value="Lead Generation">Lead Generation</option>
+            <option value=" Content Marketing"> Content Marketing</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Marketing Automation">Marketing Automation</option>
+            <option value="Sales Enablement">Sales Enablement</option>
+          </select>
+          <select name="Type" id="cType">
+            <option value="Private Companies">company Type</option>
+            <option value="Private Companies">Private Companies</option>
+            <option value="Public Companies">Public Companies</option>
+            <option value="One Person Company">One Person Company</option>
+          </select>
+          <select name="Size" id="cSize">
+            <option value="1-50">company Size</option>
+            <option value="1-50">(1-50) Employee</option>
+            <option value="51-100">(51-100) Employee</option>
+            <option value="100-200">(100-200) Employee</option>
+            <option value="200-300">(200-300) Employee</option>
+            <option value="more than 300">(more than 300) Employee</option>
+          </select>
+          <select onchange="set_country(this,country,city_state)" size="1" name="region">
+            <option value="" selected="selected">Country</option>
+            <option value=""></option>
+            <script type="text/javascript">
+              setRegions(this);
+            </script>
+          </select>
+          <select name="country" size="1" disabled="disabled" onchange="set_city_state(this,city_state)"></select>
+          <select id="cCity" name="city_state" size="1" disabled="disabled"
+            onchange="print_city_state(country,this)"></select>
+
+          <input type="file" name="fileToUpload" id="fileToUpload">
+          <input type="submit" value="Submit" name="submit" id="regCompanyBtn">
+        </div>
+      </form>
+
     </div>
   </div>
-
+  </div>
   <button type="button" class="open-button" id="openNewFormbtn">Account</button>
   <div class="form-popup" id="loginRegisterForm">
-    <form action="" class="form-container">
-      <input type="text" placeholder="Enter Email" name="email" required>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-      <button type="submit" class="btn" id="loginBtn">Login</button>
-      keep me signed In.<input type="checkbox" ><br>
-      <span>Dont have an account ?</span> <a href="#registerModal" id="registerLink">Register</a>
+    <form id="loggedIn" class="form-container">
+      <a href="pages/profile.html"><label type="text" id='userNameLbl'></label></a>
+      <button type="button" class="btn cancel" id="acclogOut">LogOut !</button>
+    </form>
+    <form id="loginReg" class="form-container">
+      <input type="text" placeholder="Enter Email" id="accountEmail" required>
+      <input type="password" placeholder="Enter Password" id="accountPassword" required>
+      keep me signed In.<input type="checkbox"><label id="registerLink">Register</label>
+      <button type="button" class="btn" id="loginBtn">Login</button>
       <button type="button" class="btn cancel" id="closeFormbtn">Close</button>
     </form>
-  </div>
 
+  </div>
+ 
   <script src="./js/app.js"></script>
   <script src="https://kit.fontawesome.com/9e5d1913ca.js" crossorigin="anonymous"></script>
   <script src="./js/style.js"></script>
