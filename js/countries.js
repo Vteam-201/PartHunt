@@ -476,8 +476,8 @@
       countryArr = countries[region].split( '|' );
       for ( let i = 0; i < countryArr.length; i++ )
         oCountrySel.options[i + 1] = new Option( countryArr[i], countryArr[i] );
-      document.getElementById( 'txtregion' ).innerHTML;
-      document.getElementById( 'txtplacename' ).innerHTML;
+      // document.getElementById( 'txtregion' ).innerHTML;
+      // document.getElementById( 'txtplacename' ).innerHTML;
     } else oCountrySel.disabled = true;
   }
 
@@ -494,16 +494,16 @@
           city_stateArr[i],
           city_stateArr[i]
         );
-      document.getElementById( 'txtplacename' ).innerHTML;
+      // document.getElementById( 'txtplacename' ).innerHTML;
     } else oCity_StateSel.disabled = true;
   }
 
   function print_city_state( oCountrySel, oCity_StateSel ) {
-    let country = oCountrySel.options[oCountrySel.selectedIndex].text;
-    let city_state = oCity_StateSel.options[oCity_StateSel.selectedIndex].text;
-    if ( city_state && city_states[country].indexOf( city_state ) != -1 )
-      document.getElementById( 'txtplacename' ).innerHTML;
-    else document.getElementById( 'txtplacename' ).innerHTML = country;
+    // let country = oCountrySel.options[oCountrySel.selectedIndex].text;
+    // let city_state = oCity_StateSel.options[oCity_StateSel.selectedIndex].text;
+    // if ( city_state && city_states[country].indexOf( city_state ) != -1 )
+    //   document.getElementById( 'txtplacename' ).innerHTML;
+    // else document.getElementById( 'txtplacename' ).innerHTML = country;
   }
 }
 let expanded = false;
