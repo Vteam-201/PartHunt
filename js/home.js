@@ -56,10 +56,6 @@ window.onclick = function ( event ) {
 document
   .getElementsByClassName( 'close' )[0]
   .addEventListener( 'click', hideModal );
-
-
-
-
 function openLoginregisterForm() {
   registrationModal.style.display = 'block';
   toggleForm();
@@ -77,6 +73,7 @@ function hideModal() {
   modal.style.display = 'none';
   registrationModal.style.display = 'none';
 }
+document.getElementById( 'ReguserForm' ).style.display = 'inline';
 function accountregView ( e ){
   if ( e.target.id === 'regUserAccount' ){
     document.getElementById( 'regCompanyForm' ).style.display = 'none';
@@ -264,8 +261,7 @@ function likeBtnClicked(){
 }
 function checkLikes( id ){
   for ( let i = 0 ; i < likes.newLikes.length ; i++ ) {
-    console.log( likes.newLikes[i].userID + likes.newLikes[i].postID );
-    console.log( currentuserArr.id + id );
+
     if ( likes.newLikes[i].userID === currentuserArr.id && likes.newLikes[i].postID === id ){
       likesbtn.style.color = '#0798CF';
       return [true,likes.newLikes.indexOf( likes.newLikes[i] )];
