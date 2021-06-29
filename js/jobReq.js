@@ -1,12 +1,12 @@
 'use strict';
 
 let alljobs = [];
-function Reqjob( userName, phone,email,reqJob,Specialties,shiftRe,education,expSalary ) {
+function Reqjob( userName, phone,email,reqJob,specialties,shiftRe,education,expSalary ) {
   this.userName = userName;
   this.phone = phone;
   this.email = email;
   this.reqJob = reqJob;
-  this.Specialties = Specialties;
+  this.specialties = specialties;
   this.shiftRe = shiftRe;
   this.education = education;
   this.expSalary = expSalary;
@@ -20,11 +20,11 @@ function handleSubmit (){
   let phone = document.getElementById( 'rPhone' ).value;
   let email = document.getElementById( 'rEmail' ).value;
   let reqJob = document.getElementById( 'reqjob' ).value;
-  let Specialties = document.getElementById( 'rSpecialties' ).options[document.getElementById( 'rSpecialties' ).selectedIndex].value;
+  let specialties = document.getElementById( 'rSpecialties' ).options[document.getElementById( 'rSpecialties' ).selectedIndex].value;
   let shiftRe = document.getElementById( 'shiftReq' ).options[document.getElementById( 'shiftReq' ).selectedIndex].value;
   let education = document.getElementById( 'EDUCATION' ).options[document.getElementById( 'EDUCATION' ).selectedIndex].value;
   let expSalary = document.getElementById( 'expectedSalary' ).options[document.getElementById( 'expectedSalary' ).selectedIndex].value;
-  new Reqjob( userName, phone,email,reqJob,Specialties,shiftRe,education,expSalary );
+  new Reqjob( userName, phone,email,reqJob,specialties,shiftRe,education,expSalary );
   saveToLocal();
 
 }
@@ -43,7 +43,7 @@ function getFromLocal(){
 
   if( data ){
     for ( let i in data ){
-      new Reqjob( i.userName, phone,email,reqJob,Specialties,shiftRe,education,expSalary );
+      new Reqjob( i.userName, i.phone,i.email,i.reqJob,i.specialties,i.shiftRe,i.education,i.expSalary );
     }
 
   }
