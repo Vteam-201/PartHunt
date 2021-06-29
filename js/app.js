@@ -264,7 +264,7 @@ posts.addPost(
 
 
 
-posts.saveToLocalStorage();
+
 
 // get html modal
 // Read More Button event Listener
