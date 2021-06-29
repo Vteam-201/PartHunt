@@ -1,5 +1,6 @@
  # V-Team
 
+
 * Odeh Abuzaid
 * Mohammed Al Homedi
 * Renad Al-Khafat
@@ -9,7 +10,7 @@
 
 ### Project Ideas 
 
-* Part-time job Portal (JobPool):
+* Part-time job Portal (PartHunt):
 
 A website that illustrates the process of picking a suitable Part-time job that a company posted.
 

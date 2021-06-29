@@ -1,3 +1,5 @@
+posts.append();
+
 let registrationModal = document.getElementById( 'registerModal' );
 let registerLink = document.getElementById( 'registerLink' );
 let loginRegisterForm = document.getElementById( 'loginRegisterForm' );

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- <link rel="stylesheet" href="./css/substyle.css"> -->
+    <link rel="stylesheet" href="../css/forms.css">
+
     <title>Post Job Page- PartHunt</title>
     <script src="../js/countries.js"></script>
     <style>
@@ -23,31 +24,25 @@
             <a href="../index.html" >Home</a>
             <a href="../pages/jobs.html">Jobs</a>
             <a href="../pages/post.html" class="active">Post a Job</a>
-            <a href="../pages/jobrequest.html">ٌRequest a Job</a>
+            <a href="#">ٌRequest a Job</a>
             <a href="../pages/aboutus.html">About us</a>
           </nav>
         </header>
         <main id="indexMain">
           <section class="parallax-section">
-            <h2>Part Hunt</h2>
-            <p>More Time More Cash</p> <br>
-            <h3> Find the work that suits you </h3><br>
-            <p> We are so glad you'er here! you'er now part of our ever growing community of people who want to make their
-              lives better via Part hunt.</p><br>
-            <p>Whether you've Joined to find the dream job or looking for opportunities we've got somthing for you. </p>
-            <br></div>
+            <h2>Post a Job</h2>
           </section>
-          <center>
+     <!-- <center></center> -->
+  
           <section>
-            <article>
               <form id="regCompanyForm" class="form-inline">
                 <div id="regComForm">
                     <section class="input">
-                  <input type="text" id="companyName" class="a" name="CompanyName" placeholder="Company Name" required >
-                  <input type="text" id="cWebsite" class="a" name="Website"  placeholder="Website" required><br><br>
-                  <input type="number" id="cPhone" class="b" name="Phone" placeholder="Phone" required>
-                  <input type="text" id="cEmail" class="b"  pattern="[^ @]*@[^ @]*" placeholder="Your Email" required=""><br><br>
-                  <input type="number" id="cfoundedYear" name="Founded" placeholder="Founded"required>
+                  <input type="text" id="companyName" class="a" name="CompanyName" placeholder="Company Name value="aaaaaa">
+                  <input type="text" id="cWebsite" class="a" name="Website" value="aaaaaa.com" placeholder="Website"><br><br>
+                  <input type="number" id="cPhone" value="22222222" class="b" name="Phone" placeholder="Phone">
+                  <input type="text" id="cEmail" class="b" value="asd@aaaaaa.com" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required=""><br><br>
+                  <input type="number" id="cfoundedYear" value="2000" name="Founded" placeholder="Founded">
                 </section>
                 <section class="select">
                     <section class="up">
@@ -112,7 +107,7 @@
       <input type="text" id="Jobtitle" name="jobtitle" placeholder=" Job Title"><br><br>
       <!-- <label for="JobDescription">Job Description:</label><br> marwanand mohammed added id to text area  -->
       <textarea   id="JobDescription"  rows="10" cols="50" placeholder="Write your Job Description ..."></textarea><br>
-      <section>
+      <input>
 
           <label for="JobCategory" class="JobCategory" id="JobCategory">Job Category</label><br>
           <!-- <input type="text" id="jobcategory" name="job" value=" "><br> -->
@@ -157,14 +152,10 @@
           </select></br>
           <label for="PayRate">Pay Rate / PerHour / JD</label><br>
           <input type="text" id="payR" name="payR"><br>
-          <input class="submit" type="button"  id="submit">
+          <input id="submit" type="button"  class="submit" value="Submit" >
       </section>
   </form>
-
-  <h2 id='topcompaniesh2'></h2>
-  </article>
 </section>
-</center>
           </main>
           <section></section>
     <footer class="footer-distributed">
