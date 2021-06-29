@@ -267,7 +267,7 @@ posts.addPost(
 
 
 
-posts.saveToLocalStorage();
+
 
 //#endregion
 

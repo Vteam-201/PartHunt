@@ -29,28 +29,50 @@ function newJobposts (){
 
   company.saveToLocalStorage();
 
-  location.href = '../index.html';
-}
-
+  // location.href = '../index.html';
+} 
 function generateNewID( array ) {
   return parseInt( array[array.length - 1].id ) + 1;
 }
 
 
-// if( data ){
-//   company.companies = [];
-//   for ( let i = 0 ; i < companiesArr.length ;i++ ) {
-//     company.addCompany( companiesArr[i].id,
-//       companiesArr[i]. companyName,
-//       companiesArr[i].industry,
-//       companiesArr[i].imgSrc,
-//       companiesArr[i].website,
-//       companiesArr[i].phone,
-//       companiesArr[i].size,
-//       companiesArr[i].headquarters,
-//       companiesArr[i].type,
-//       companiesArr[i].founded,
-//       companiesArr[i].specialties,
-//       companiesArr[i].address );
-//   }
+function loadfromLocalStorage(){
+  let comaniesdata =  JSON.parse( localStorage.getItem( 'companies' ) ) || [];
 
+  if( comaniesdata ){
+    company.companies = [];
+    for ( let i = 0 ; i < comaniesdata.length ;i++ ) {
+      company.addCompany( comaniesdata[i].id,
+        comaniesdata[i]. dataName,
+        comaniesdata[i].industry,
+        comaniesdata[i].imgSrc,
+        comaniesdata[i].website,
+        comaniesdata[i].phone,
+        comaniesdata[i].size);
+    }
+  }
+
+
+  let postsArr =  JSON.parse( localStorage.getItem( 'posts' ) ) || [];
+
+  if(postsArr){
+  
+    posts.newPosts = [];
+    for ( let i = 0 ; i < postsArr.length ;i++ ) {
+      posts.addPost( postsArr[i].id,
+        postsArr[i].companyID,
+        postsArr[i].jobTitle,
+        postsArr[i].jobDescription,
+        postsArr[i].jobCategory,
+        postsArr[i].jobShift,
+        postsArr[i].payRate,
+        postsArr[i].companySrc );
+    }
+
+  }
+
+ 
+ 
+}
+
+loadfromLocalStorage();
