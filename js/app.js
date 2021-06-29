@@ -1,9 +1,4 @@
 'use strict';
-// TODO: Comments Constructor.
-// TODO: display Comments on jop post.
-//#region 000
-
-//#endregion
 
 //#region  JobPost
 const Posts = function ( newPosts ) {
@@ -38,13 +33,12 @@ Posts.prototype.removeItem = function ( post ) {
   this.newPosts.splice( post, 1 );
 };
 let cards = document.getElementById( 'indexMain' );
-
 Posts.prototype.append = function () {
   let topTenSection = document.createElement( 'section' );
   topTenSection.setAttribute( 'Class', 'cards' );
-  let latestPosts = this.newPosts.slice( ( 0 ), 3 );
-  document.getElementById( 'topcompaniesh2' ).innerHTML = '<h2 id=\'topcom\'>Top Companies </h2>';
-  for ( const i of latestPosts ) {
+  let topcom = this.newPosts.slice( ( 0 ), 3 );
+  document.getElementById( 'topcompaniesh2' ).innerHTML = '<h2 class=\'topcom\'>Top Companies </h2>';
+  for ( const i of topcom ) {
     let div = document.createElement( 'div' );
     div.innerHTML = `  
     <a href="./pages/companyProfile.html?id=${i.id}"><img src="./res/${i.companyID}.jpg" alt=""></a> `;
@@ -53,9 +47,16 @@ Posts.prototype.append = function () {
     topTenSection.appendChild( div );}
   cards.appendChild( topTenSection );
 
+
+
+  let hsection = document.createElement( 'section' );
   let section = document.createElement( 'section' );
   section.setAttribute( 'Class', 'cards' );
-  latestPosts = this.newPosts.slice( ( this.newPosts.length - 6 ), this.newPosts.length );
+  let latestPosts = this.newPosts.slice( ( this.newPosts.length - 6 ), this.newPosts.length );
+  let h2 = document.createElement( 'h2' );
+  h2.textContent = 'Latest Job Posts';
+  h2.setAttribute( 'Class', 'latest' );
+  hsection.appendChild( h2 );
   for ( const i of latestPosts ) {
     let article = document.createElement( 'article' );
     article.innerHTML = `  
@@ -65,6 +66,8 @@ Posts.prototype.append = function () {
        <a href="#${i.id}" class='showModal'>Read More</a> `;
     section.appendChild( article );
   }
+  hsection.setAttribute( 'Class', 'latest' );
+  cards.appendChild( hsection );
   cards.appendChild( section );
 };
 Posts.prototype.appendModalData = function ( id ) {
@@ -266,12 +269,6 @@ posts.addPost(
 
 posts.saveToLocalStorage();
 
-// get html modal
-// Read More Button event Listener
-// Fill the Modal
-// Get the modal
-posts.append();
-// Get the modal
 //#endregion
 
 //#region Company Profiles
