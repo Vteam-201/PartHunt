@@ -191,8 +191,20 @@ function submitForm(){
         } );
         hideModal();
       }}else{
-      if ( confirm( 'Please Login or Register to apply' ) ){
-        location.href = '../index.html';
+      {
+        Swal.fire( {
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your application submitted',
+          showConfirmButton: false,
+          timer: 2000
+
+        } );
+        Swal.fire(
+          'Applying for a job!',
+          'You must register or login to apply',
+          'question' );
+
       }
     }
 

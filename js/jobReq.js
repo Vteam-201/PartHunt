@@ -53,7 +53,6 @@ function handleSubmit( event ){
 
   let education = event.target.jReducation.options[event.target.jReducation.selectedIndex].value;
   let expSalary = event.target.expectedSalary.options[event.target.expectedSalary.selectedIndex].value;
-  console.log( ReqJob.alljobs );
 
   new ReqJob( userName, phone,email,reqJob,specialties,shiftRe,education,expSalary );
 
