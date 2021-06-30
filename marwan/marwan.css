@@ -1,0 +1,351 @@
+.form-inline {
+    margin-top: 10px;
+   
+    margin-left: 380px;
+    display: flexbox;
+    grid-template-columns: 1fr 1fr;
+      max-width: 50%;
+      padding: 10px;
+      background-color: #e3e3e3;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-inline .a {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+  
+}
+.a:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline .b {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}
+.b :hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.input :hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline .mid {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}
+.mid:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.form-inline .mid1 {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+border-radius: 3px;
+}
+.mid1:hover{
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline #cIndustry {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#cIndustry :hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.up :hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.form-inline #cSpecialties {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}
+#cSpecialties:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.form-inline #rSpecialties {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}
+#rSpecialties:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline .city {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}.city :hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline #fileToUpload {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#fileToUpload :hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline #Jobtitle {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#Jobtitle:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline #jc {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#jc:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline #JobDescription {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#JobDescription:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline #Jobshift {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+} #Jobshift:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline #payR {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#payR:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.form-inline #submit {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #abc9f5;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      cursor: pointer;
+      margin: 5px;
+  align-items: center;
+  margin-left: 290px;
+  border-radius: 3px;
+  
+}#submit:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.modal-content{background-color: #e3e3e3;}
+
+ .formclass { 
+    display: grid;
+    display: flexbox;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+justify-content: space-around;
+      background-color: #e3e3e3;
+   border: none;
+    width: 100%;
+    height:100%; 
+
+
+      
+;}
+   
+.formclass #fullName{
+    margin-right: 5px;
+    padding-left: 5px;
+    width: 90%;
+      padding: 20px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#fullName:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.formclass #email{
+    width: 90%;
+      padding: 20px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#email:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.formclass #number{
+    width: 90%;
+      padding: 20px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#number:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.formclass #dropdown{
+    width: 90%;
+      padding: 20px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#dropdown:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.formclass .input-field{
+    width: 90%;
+      padding: 10px;
+    margin-right: 30px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}.input-field:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.formclass #applicationSubmit{
+    display: inline-block;
+      border-radius: 4px;
+      background-color: #abc9f5;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 20px;
+      padding: 20px;
+      width: 150px;
+      cursor: pointer;
+      margin: 5px;
+  margin-left: 290px;
+  border-radius: 3px;
+  height: 75%;
+  text-align: center;
+}#applicationSubmit:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.formclass #label{
+   display: block;
+
+}
+
+.formclass #fileToUpload{
+    width: 90%;
+      padding: 20px;
+    display: block;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    border-radius: 3px;
+}#fileToUpload:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+} 
+
+#post{  margin-top: 10px;
+   
+    margin-left: 380px;
+    display: flexbox;
+    grid-template-columns: 1fr ;
+      max-width: 50%;
+      padding: 10px;
+  
+      background-color: #e3e3e3;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#senddata{
+    display: inline-block;
+      border-radius: 4px;
+      background-color: #abc9f5;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 20px;
+      padding: 20px;
+      width: 150px;
+      cursor: pointer;
+      margin: 5px;
+  margin-left: 290px;
+  border-radius: 3px;
+  height: 75%;
+  text-align: center;
+
+}#senddata:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+} 
+
+
