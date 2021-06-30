@@ -3,9 +3,9 @@
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
-    #jobSeekerRegForm {
-      margin-right: 15px;
-    }
+  #jobSeekerRegForm {
+    margin-right: 15px;
+  }
   .form-inline {  
     display: flex;
     flex-flow: row wrap;

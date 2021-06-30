@@ -191,13 +191,12 @@ function submitForm(){
         } );
         hideModal();
       }}else{
-      if ( confirm( 'Please Login or Register to apply' ) ){
+      Swal.fire( {
+        title: 'Wow!',
+        text: 'Please Login or Register to apply!',
+        type: 'success'
+      } ).then( function() {
         location.href = '../index.html';
-      }
+      } );
     }
-
-  }
-
-
-}
-
+  }}
