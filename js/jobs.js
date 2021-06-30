@@ -1,4 +1,22 @@
 'use strict';
+
+let jobApplication = document.getElementById ( 'submitJobApplication' );
+
+jobApplication.addEventListener ( 'submit', appplication );
+function appplication ( e ) {
+
+  e.preventDefault();
+
+  console.log ( fullName.target.value );
+}
+
+document.getElementById("#myFormId").addEventListener("submit", function(e){
+  if(!isValid){
+      e.preventDefault();    
+  }
+
+
+
 const jobPostsArray = JSON.parse( localStorage.getItem( 'posts' ) ) || [];
 let cards = document.querySelector( 'main' );
 function appendJobs(){
