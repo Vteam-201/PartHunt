@@ -6,10 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page- PartHunt</title>
-  <link rel="shortcut icon" type="image/jpg" href="./res/logo.png" />
+  <link rel="shortcut icon" type="image/jpg" href="../res/fav.png" />
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/substyle.css">
+  <link rel="stylesheet" href="./css/postajob.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="sweetalert2.min.css">
   <script src="./js/countries.js"></script>
 </head>
 
@@ -21,7 +24,7 @@
         <a href="index.html" class="active">Home</a>
         <a href="./pages/jobs.html">Jobs</a>
         <a href="./pages/post.html">Post a Job</a>
-        <a href="./pages/jobrequest.html">ٌRequest a Job</a>
+        <a href="./pages/jobrequest.html">Request a Job</a>
         <a href="./pages/aboutus.html">About us</a>
       </nav>
       <nav>
@@ -48,7 +51,6 @@
     <footer class="footer-distributed">
 
       <div class="footer-left">
-
         <img src="./res/logooooo.png" alt="">
         <p class="footer-links">
           <a href="./pages/jobs.html" class="link-1">Home</a>
@@ -128,31 +130,28 @@
   </div>
 
   <div id="registerModal" class="modal">
-    <div class="modal-header">
+    <div class="modal-header" style="height: 70px; width: 360px;">
       <span class="close" id='closeLoginRegform'>&times;</span>
       <label>Account Registration</label>
     </div>
-    <div class="modal-content" style="height: 600px;">
+    <div class="modal-content"  style="height: 520px; width: 360px;background-color: white;">
       <div id="chooseAccountTypeBtns" class="chooseAccountTypeBtns">
         <button type="button" value="1" id="regUserAccount" hidden>User Account</button>
       <button type="button" value="2" id="regCompanyAccount" hidden>Company Account</button> 
       </div>
-      <form id="ReguserForm">
-        <div class='jobSeekerRegForm'>
-          <label>Register Job Seeker</label>
-          <button class="form-inline">
-            <input type="text" name="name" id="fName" placeholder="First Name" autocomplete="on" required>
+   
+      <form id="ReguserForm" class="form-container">
+         <input type="text" name="name" id="fName" placeholder="First Name" autocomplete="on" required>
             <input type="text" name="Last name" id="lName" placeholder="Last name" autocomplete="on" required>
-            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required>
             <input type="number" name="Phone number" id="phone" placeholder="Phone number" autocomplete="on" required>
             <input type="password" name="Enter a password" id="uPassword" placeholder="Enter a password"
               autocomplete="on" required>
             <input type="password" name="Confirm password" id="uCPassword" placeholder="Confirm password"
               autocomplete="on" required>
-            <input type="submit" value="Submit" id="regUser">
+            <input type="submit" class="btn" value="Submit" id="regUser">
         </div>
       </form>
-
       <form id="regCompanyForm" class="form-inline">
         <div id="regComForm">
           <input type="text" id="companyName" name="CompanyName" placeholder="Company Name">
@@ -220,7 +219,7 @@
       </form>
 
     </div>
-  </div>
+ 
   </div>
   
   <button type="button" class="open-button" id="openNewFormbtn">Account</button>

@@ -715,12 +715,15 @@ button:hover{
   right: 15px;
   z-index: 9;
 }
+.form-container #userNameLbl{
+  align-items: center;
+}
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text], .form-container input[type=password] , .form-container input[type=number] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -1060,7 +1063,7 @@ a.active::after {
   content: '';
   position: absolute;
   height: 2px;
-  background: #222;
+  background: #00d9ff;
   left: 0;
   bottom: 0;
 }

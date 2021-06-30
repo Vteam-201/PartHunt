@@ -56,11 +56,21 @@ function handleSubmit( event ){
   console.log( ReqJob.alljobs );
 
   new ReqJob( userName, phone,email,reqJob,specialties,shiftRe,education,expSalary );
-  console.log( ReqJob.alljobs );
+
+  Swal.fire( {
+    position: 'top-end',
+    icon: 'success',
+    title: 'Requested',
+    showConfirmButton: false,
+    timer: 1500
+  } );
+
   loadData();
   localStorage.setItem( 'jobRequest', JSON.stringify( ReqJob.alljobs ) );
   jopForm.reset();
 }
+
+
 function loadData(){
   jPost.innerHTML = '';
   for ( let i in ReqJob.alljobs ){

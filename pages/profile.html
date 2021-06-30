@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>User Profile</title>
-  <link rel="shortcut icon" type="image/jpg" href="./res/logo.png" />
+  <link rel="shortcut icon" type="image/jpg" href="../res/fav.png" />
   <link rel="stylesheet" href="../css/reset.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <script src="../js/countries.js"></script>
 </head>
-
 <body>
   <section class="container">
     <header id="myHeader">
@@ -20,7 +19,7 @@
         <a href="../index.html" >Home</a>
         <a href="../pages/jobs.html">Jobs</a>
         <a href="../pages/post.html">Post a Job</a>
-        <a href="../pages/jobrequest.html">ٌRequest a Job</a>
+        <a href="../pages/jobrequest.html">Request a Job</a>
         <a href="../pages/aboutus.html">About us</a>
       </nav>
       <nav>
@@ -47,9 +46,9 @@
         </center>
         <section class="edit-profile-btn">
           <!-- <label for="edit">Edit Company Profile</label> -->
-          <button id="editProfileBtn" type="button" style="font-size: 24px; margin-bottom: 50px; margin-right: 20px">
+          <!-- <button id="editProfileBtn" type="button" style="font-size: 24px; margin-bottom: 50px; margin-right: 20px">
             Edit Your Profile <i class="fas fa-edit"></i>
-          </button>
+          </button> -->
 
           <!-- <button style="font-size: 24px; margin-bottom: 50px; margin-right: 20px" >
               <a href="../pages/register.html">Create Company Page</a>
@@ -103,7 +102,7 @@
         <span class="close">&times;</span>
         <label id="modalTitle" class="modalTitle"></label>
       </div>
-      <div id="modalContent" class="modal-content">
+      <div id="modalContent" class="modal-content" >
         <div id="editUserProfile">
           <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required />
           <input type="surname" name="surname" id="surname" placeholder="Surname" autocomplete="on" required />
@@ -213,7 +212,7 @@
     <!-- ********************************************************************* -->
     <section></section>
 
-    <button type="button" class="open-button cancel" id="openNewFormbtn">logout</button>
+    <button type="button" class="open-button cancel" id="logutBtn">logout</button>
     <div class="form-popup" id="loginRegisterForm">
       <form id="loggedIn" class="form-container">
         <a href="pages/profile.html"><label type="text" id='userNameLbl'></label></a>
@@ -235,6 +234,7 @@
           <a href="./pages/index.html" class="link-1">Home</a>
           <a href="../pages/jobs.html">Jobs</a>
           <a href="../pages/post.html">Post a Job</a>
+          <a href="../pages/jobrequest.html">Request a Job</a>
           <a href="../pages/aboutus.html">About us</a>
 
         </p>
