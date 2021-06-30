@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page- PartHunt</title>
-  <link rel="shortcut icon" type="image/jpg" href="../res/logo.png" />
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/substyle.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/forms.css">
+
+    <title>Job Request Page- PartHunt</title>
 </head>
 
 <body>
@@ -17,10 +17,10 @@
     <header id="myHeader">
       <img src="../res/logooooo.png" alt="">
       <nav>
-        <a href="../index.html">Home</a>
+        <a href="../index.html" >Home</a>
         <a href="../pages/jobs.html">Jobs</a>
         <a href="../pages/post.html">Post a Job</a>
-        <a href="#">ٌRequest a Job</a>
+        <a href="../pages/jobrequest.html" class="active">ٌRequest a Job</a>
         <a href="../pages/aboutus.html">About us</a>
       </nav>
     </header>
@@ -30,57 +30,67 @@
       </section>
       <section>
         <form id="post" class="form-inline">
+          <fieldset>
+            <legend>Job Request</legend>
           <div id="reqJobForm">
             <section class="input">
-              <input type="text" id="reqName" class="a" name="reqName" placeholder="your Name">
-              <input type="number" id="rPhone" class="b" name="Phone" placeholder="Phone">
-              <input type="text" id="rEmail" class="b" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
+              <div id="mosa1">
+              <input type="text" id="reqName" class="a" name="reqName" placeholder="your Name" required>
+              <input type="number" id="rPhone" class="b" name="Phone" placeholder="Phone" required>
+            </div>
+            <div id="mosa2">
+              <input type="text" id="rEmail" class="b" pattern="[^ @]*@[^ @]*" name="email" placeholder="Your Email"
                 required=""><br><br>
-              <input type="text" id="reqjob" class="b" name="jobRequired" placeholder="job required">
-
+              <input type="text" id="reqjob" class="b" name="jobRequired" placeholder="job required" required>
+            </div>
             </section>
             <section class="select">
               <section class="up">
-
-                <select name="Specialties" id="rSpecialties">
-                  <option value="Agriculture ">Specialties</option>
-                  <option value="Lead Generation">Lead Generation</option>
-                  <option value=" Content Marketing"> Content Marketing</option>
-                  <option value="Digital Marketing">Digital Marketing</option>
-                  <option value="Marketing Automation">Marketing Automation</option>
-                  <option value="Sales Enablement">Sales Enablement</option>
+                <div id="mosa3">
+                <select  name="Specialties" id="rSpecialties" required>
+                  <option value=" ">Specialties</option >
+                  <option value=" ">Lead Generation</option>
+                  <option value=" "> Content Marketing</option>
+                  <option value="">Digital Marketing</option>
+                  <option value="">Marketing Automation</option>
+                  <option value="">Sales Enablement</option>
                 </select>
-                <select name="shiftReq" id="shiftReq">
-                  <option value="shiftReq">shift Req</option><br>
-                  <option value="morning">Morning</option>
-                  <option value="earlyMorning">Early Morning</option>
-                  <option value="evening">Evening</option>
-                  <option value="night">night</option>
-
+                <select  name="shiftReq" id="shiftreq" required>
+                  <option value="">shift Req</option><br>
+                  <option value="">Morning</option>
+                  <option value="">Early Morning</option>
+                  <option value="">Evening</option>
+                  <option value="">night</option>
                 </select>
-
-              </section>
-              <section class="mid">
-                <select name="EDUCATION" id="EDUCATION" form="eduform">
-                  <option value="EDUCATIONEDUCATION ">EDUCATION </option><br>
-                  <option value="secondary">Secondary</option><br>
-                  <option value="bachelor ">Bachelor </option><br>
-                  <option value="masters ">Masters </option><br>
+              </div>
+              <div id="mosa4">
+                <select  name="education" id="jReducation" required>
+                  <option value="">Education </option><br>
+                  <option value="">Secondary</option><br>
+                  <option value=" ">Bachelor </option><br>
+                  <option value=" ">Masters </option><br>
 
                 </select><br>
-                <select name="expSalary" id="expectedSalary">
-                  <option value="expected Salary">expected Salary</option>
-                  <option value="200-300">(200-300) JD</option>
-                  <option value="300-400">(300-400) JD</option>
-                  <option value="(400-500)">(400-500) JD</option>
-                  <option value="(500-800)">(500-800) JD</option>
-                  <option value="more than 800">(more than 800) JD</option>
+                <select  name="expSalary" id="expectedSalary" required>
+                  <option value="">expected Salary</option>
+                  <option value="">(200-300) JD</option >
+                  <option value="">(300-400) JD</option>
+                  <option value="">(400-500) JD</option>
+                  <option value="">(500-800) JD</option>
+                  <option value="">(more than 800) JD</option>
                 </select>
+              </div>
               </section>
             </section>
-            <button id="senddata" type="button">post</button>
+            <button type="submit" id="submit">Submit</button>
           </div>
+        </fieldset>
         </form>
+      </section>
+
+      <section id="jPost" class="cards">
+        
+
       </section>
     </main>
     <section></section>
