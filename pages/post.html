@@ -16,7 +16,7 @@
 <body>
     <section class="container">
         <header id="myHeader">
-          <img src="../res/logooooo.png" alt="">
+          <img src="../res/logooooo.png" id="logoChange" alt="">
           <nav>
             <a href="../index.html" >Home</a>
             <a href="../pages/jobs.html">Jobs</a>
@@ -28,6 +28,7 @@
         <main id="indexMain">
           <section class="parallax-section">
             <h2>Post a Job</h2>
+            <p>fill the form below and Click Submit</p>
           </section>
      <!-- <center></center> -->
   
@@ -36,11 +37,11 @@
               <div id="regComForm"><div id="error"></div>
                 <section class="input">
                   <input type="text" id="companyName" class="a" name="CompanyName"placeholder="Company Name" >
-                  <input type="text" id="cWebsite" class="a" name="Website" placeholder="Website" required><br><br>
-                  <input type="number" id="cPhone" class="b" name="Phone" placeholder="Phone" required>
+                  <input type="text" id="cWebsite" class="a" name="Website" placeholder="Website"  ><br><br>
+                  <input type="number" id="cPhone" class="b" name="Phone" placeholder="Phone"  >
                   <input type="text" id="cEmail" class="b" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                    required=""><br><br>
-                  <input type="number" id="cfoundedYear"  class="b" name="Founded" placeholder="Founded" required>
+                     =""><br><br>
+                  <input type="number" id="cfoundedYear"  class="b" name="Founded" placeholder="Founded"  >
                 </section>
                 <section class="select">
                   <section class="up">
@@ -105,14 +106,14 @@
                   <select   class="city" id="cCity" name="city_state" size="1" disabled="disabled"
                     onchange="print_city_state(country,this)"></select>
                 </section></div>
-                <label for="fileToUpload" class="fileToUpload" id="idfileToUpload">Company photo</label>
-                <input type="file" name="fileToUpload" id="fileToUpload">
+                <label for="fileToUpload" class="fileToUpload" id="idfileToUpload">Company Logo</label>
+                <input type="file" name="fileToUpload" id="companypicture" accept=".jpg, .jpeg, .png">
                 <input type="submit" value="Submit" name="submit" id="regCompanyBtn" hidden>
               </div>
               <input type="text" id="Jobtitle" name="jobtitle" placeholder=" Job Title"><br><br>
               <!-- <label for="JobDescription">Job Description:</label><br> marwanand mohammed added id to text area  -->
               <textarea id="JobDescription" rows="10" cols="50"
-                placeholder="Write your Job Description ..."     required  ></textarea><br>
+                placeholder="Write your Job Description ..."        ></textarea><br>
               <section>
                 <label for="JobCategory" class="JobCategory" id="JobCategory">Job Category</label><br>
                 <!-- <input type="text" id="jobcategory" name="job" value=" "><br> -->
@@ -155,8 +156,8 @@
                   <option value="Evening">Evening</option>
                   <option value="Night">Night</option>
                 </select></br>
-                <input type="text" id="payR" name="payR" placeholder="Pay Rate / PerHour / JD" required ><br>
-        <input id="submit" type="button"  class="submit" value="Submit" >
+                <input type="text" id="payR" name="payR" placeholder="Pay Rate / PerHour / JD"   ><br>
+        <input id="submit" type="submit"  class="submit" value="Submit" >
     </section>
 </section>
         </main>
@@ -167,12 +168,11 @@
 
         <img src="../res/logooooo.png" alt="">
         <p class="footer-links">
-          <a href="#" class="link-1">Home</a>
-          <a href="./pages/jobs.html">Jobs</a>
-
+          <a href="./pages/index.html" class="link-1">Home</a>
+          <a href="../pages/jobs.html">Jobs</a>
+          <a href="../pages/post.html">Post a Job</a>
           <a href="../pages/jobrequest.html">Request a Job</a>
-
-
+          <a href="../pages/aboutus.html">About us</a>
         </p>
 
         <p class="footer-company-name">V-Team -Part Hunt © 2021</p>
@@ -218,6 +218,7 @@
 
     </footer>
         </section>
+        <script src="../js/app.js"></script>
         <script src="../js/postaJob.js"></script>
         <script src="../js/style.js"></script>
         <script src="https://kit.fontawesome.com/9e5d1913ca.js" crossorigin="anonymous"></script>

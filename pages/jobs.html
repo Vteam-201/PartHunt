@@ -31,6 +31,7 @@
     <main>
       <section class="parallax-section">
         <h2>Latest Jobs</h2>
+        <p>Browse below listed jobs and apply.</p>
       </section>
     </main>
     <div id="myModal" class="modal">
@@ -55,12 +56,12 @@
         </div>
       </div>
     </div>
-    <div id="jobapplicationform" class="modal">
-      <div class="modal-header">
+    <div id="jobapplicationform"  class="modal">
+      <div class="modal-header" style="width: 50%;">
         <span class="close">&times;</span>
         <label id="applicationTitle" class="modalTitle"></label>
       </div>
-      <div id='modalContent' class="modal-content" height="800px">
+      <div id='modalContent' class="modal-content" style="width: 50%;" height="800px">
         <form id="submitJobApplication">
           <input type="text" name="fullName" id="fullName" class="input-field" required placeholder="Enter your Name" >
           <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
@@ -76,12 +77,12 @@
           <label  for="comments">Any Comments?</label>
           <textarea required id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment"
             placeholder="Enter your comment here..."></textarea>
-          <label for="comments">Upload your CV</label>
+          <br><label for="comments">Upload your CV</label>
           <input required type="file" name="fileToUpload" id="fileToUpload"><br>
-          <button id="applicationSubmit" type="button">Submit</button>
+          <button id="applicationSubmit" class= 'form-container btn' type="button">Submit</button>
         </form>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" style="width: 50%;">
       </div>
     </div></div>
   <section></section>
