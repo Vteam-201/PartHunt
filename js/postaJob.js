@@ -1,6 +1,5 @@
 'user strict';
-let formsubmit = document.getElementById( 'submit' );
-formsubmit.addEventListener( 'click', newJobposts );
+
 let pid,jobTitle, jobDescription, jobCategory,jobShift, payRate,companySrc;
 let id,imgSrc, website,phone,size,industry;
 pid = `${generateNewID( posts.newPosts ) } `;
@@ -19,8 +18,10 @@ phone = document.getElementById( 'cPhone' ).value ;
 size = document.getElementById( 'cSize' ).options[document.getElementById( 'cSize' ).selectedIndex].value;
 industry = document.getElementById( 'cIndustry' ).options[document.getElementById( 'cIndustry' ).selectedIndex].value;
 
-
-function newJobposts (){
+let formsubmit = document.getElementById( 'submit' );
+formsubmit.addEventListener( 'submit', newJobposts );
+function newJobposts ( event ){
+  event.preventDefault();
   posts.addPost ( pid, id, jobTitle, jobDescription, jobShift, jobCategory, payRate, companySrc );
   posts.saveToLocalStorage();
 
@@ -30,7 +31,7 @@ function newJobposts (){
   company.saveToLocalStorage();
 
   // location.href = '../index.html';
-} 
+}
 function generateNewID( array ) {
   return parseInt( array[array.length - 1].id ) + 1;
 }
@@ -48,15 +49,15 @@ function loadfromLocalStorage(){
         comaniesdata[i].imgSrc,
         comaniesdata[i].website,
         comaniesdata[i].phone,
-        comaniesdata[i].size);
+        comaniesdata[i].size );
     }
   }
 
 
   let postsArr =  JSON.parse( localStorage.getItem( 'posts' ) ) || [];
 
-  if(postsArr){
-  
+  if( postsArr ){
+
     posts.newPosts = [];
     for ( let i = 0 ; i < postsArr.length ;i++ ) {
       posts.addPost( postsArr[i].id,
@@ -71,8 +72,8 @@ function loadfromLocalStorage(){
 
   }
 
- 
- 
+
+
 }
 
 loadfromLocalStorage();

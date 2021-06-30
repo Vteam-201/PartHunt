@@ -137,42 +137,54 @@ if( JSON.parse( localStorage.getItem( 'jobapplications' ) ) ){
 
 }
 
+function validateForm(){
 
+  return true ;
+}
+
+let appID,fullName,email,age,currentStatus,comments,cvPath,jobID,jobTitle,userID,datesubmitted,position;
 
 function submitForm(){
-  if ( JSON.parse( localStorage.getItem( 'CURRENT_USER' ) ) ) {
-    let position = document.getElementById( 'dropdown' );
-    let appID,fullName,email,age,currentStatus,comments,cvPath,jobID,jobTitle,userID,datesubmitted;
-    jobID = applyBtn.value;
-    userID = currentuserArr.id;
-    appID = jobID + userID;
-    let exists = false;
-    for ( const i of application.applications ){
-      console.log( i );
-      if ( i.appID === appID ){
-        exists = true;
-        alert( 'allready applied' );
+  position = document.getElementById( 'dropdown' );
+  fullName = document.getElementById( 'fullName' ).value;
+  email = document.getElementById( 'email' ).value;
+  age = document.getElementById( 'number' ).value;
+  currentStatus = position.options[position.selectedIndex].value;
+  comments = document.getElementById( 'comments' ).value;
+  cvPath = document.getElementById( 'fileToUpload' ).value;
+  jobTitle = document.getElementById( 'applicationTitle' ).value;
+  datesubmitted = Date();
+
+  if ( validateForm() ){
+    if ( JSON.parse( localStorage.getItem( 'CURRENT_USER' ) ) ) {
+      jobID = applyBtn.value;
+      userID = currentuserArr.id;
+      appID = jobID + userID;
+      let exists = false;
+      for ( const i of application.applications ){
+        console.log( i );
+        if ( i.appID === appID ){
+          exists = true;
+          alert( 'allready applied' );
+          location.reload();
+          break;}}
+      if( !exists ){
+
+        application.addApplication( appID,fullName,email,age,currentStatus,comments,cvPath,jobID,jobTitle,userID,datesubmitted );
+        console.log( application.applications );
+        console.log( Date() );
+        application.saveToLocalStorage( application.applications );
+        jobapplicationform.style.display = 'none';
+        confirm( 'applicationSubmitedAlert' );
         location.reload();
-        break;}}
-    if( !exists ){
-      fullName = document.getElementById( 'fullName' ).value;
-      email = document.getElementById( 'email' ).value;
-      age = document.getElementById( 'number' ).value;
-      currentStatus = position.options[position.selectedIndex].value;
-      comments = document.getElementById( 'comments' ).value;
-      cvPath = document.getElementById( 'fileToUpload' ).value;
-      jobTitle = document.getElementById( 'applicationTitle' ).value;
-      datesubmitted = Date();
-      application.addApplication( appID,fullName,email,age,currentStatus,comments,cvPath,jobID,jobTitle,userID,datesubmitted );
-      console.log( application.applications );
-      console.log( Date() );
-      application.saveToLocalStorage( application.applications );
-      jobapplicationform.style.display = 'none';
-      confirm( 'applicationSubmitedAlert' );
-      location.reload();
-    }}else{
-    if ( confirm( 'Please Login or Register to apply' ) ){
-      location.href = '../index.html';
+      }}else{
+      if ( confirm( 'Please Login or Register to apply' ) ){
+        location.href = '../index.html';
+      }
     }
-  }}
+
+  }
+
+
+}
 

@@ -9,6 +9,7 @@
   <link rel="shortcut icon" type="image/jpg" href="../res/fav.png" />
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/forms.css">
   <script src="../js/countries.js"></script>
 </head>
 
@@ -60,10 +61,10 @@
       </div>
       <div id='modalContent' class="modal-content" height="800px">
         <form id="submitJobApplication">
-          <input type="text" name="fullName" id="fullName" class="input-field" required placeholder="Enter your Name">
+          <input type="text" name="fullName" id="fullName" class="input-field" required placeholder="Enter your Name" >
           <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
-          <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
-          <select id="dropdown" name="currentPos" class="dropdown">
+          <input type="number" name="age" id="number" min="1" max="125" required class="input-field" placeholder="Age">
+          <select id="dropdown" name="currentPos" required class="dropdown">
             <option disabled value>Current Status</option>
             <option value="student">Student</option>
             <option value="job">Full Time Job</option>
@@ -71,11 +72,11 @@
             <option value="intern">Intern</option>
             <option value="other">Unemployed</option>
           </select>
-          <label for="comments">Any Comments?</label>
-          <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment"
+          <label  for="comments">Any Comments?</label>
+          <textarea required id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment"
             placeholder="Enter your comment here..."></textarea>
           <label for="comments">Upload your CV</label>
-          <input type="file" name="fileToUpload" id="fileToUpload"><br>
+          <input required type="file" name="fileToUpload" id="fileToUpload"><br>
           <button id="applicationSubmit" type="button">Submit</button>
         </form>
       </div>
