@@ -36,16 +36,16 @@
             <form  class="form-inline"  name ="myForm"  id="form"    >
               <div id="regComForm"><div id="error"></div>
                 <section class="input">
-                  <input type="text" id="companyName" class="a" name="CompanyName"placeholder="Company Name" >
-                  <input type="text" id="cWebsite" class="a" name="Website" placeholder="Website"  ><br><br>
-                  <input type="number" id="cPhone" class="b" name="Phone" placeholder="Phone"  >
+                  <input type="text" id="companyName" class="a" name="CompanyName"placeholder="Company Name"required >
+                  <input type="text" id="cWebsite" class="a" name="Website" placeholder="Website" required ><br><br>
+                  <input type="number" id="cPhone" class="b" name="Phone" placeholder="Phone" required >
                   <input type="text" id="cEmail" class="b" pattern="[^ @]*@[^ @]*" placeholder="Your Email"
-                     =""><br><br>
-                  <input type="number" id="cfoundedYear"  class="b" name="Founded" placeholder="Founded"  >
+                     ="" required   ><br><br>
+                  <input type="number" id="cfoundedYear"  class="b" name="Founded" placeholder="Founded" required  >
                 </section>
                 <section class="select">
                   <section class="up">
-                    <select name="Industry" id="cIndustry">
+                    <select name="Industry" id="cIndustry" required  >
                       <option value="Industry ">Industry</option>
                       <option value="Agriculture ">Agriculture</option>
                       <option value="Basic Metal Production">Basic Metal Production</option>
@@ -68,7 +68,7 @@
                       <option value="Transport ">Transport </option>
                       <option value="Utilities (water; gas; electricity)">Utilities (water; gas; electricity)</option>
                     </select>
-                    <select name="Specialties" id="cSpecialties">
+                    <select name="Specialties" id="cSpecialties" required >
                       <option value="Agriculture ">Specialties</option>
                       <option value="Lead Generation">Lead Generation</option>
                       <option value=" Content Marketing"> Content Marketing</option>
@@ -78,13 +78,13 @@
                     </select>
                   </section>
                   <section >
-                    <select name="Type" id="cType" class="mid1">
+                    <select name="Type" id="cType" class="mid1" required  >
                       <option value="Private Companies">company Type</option>
                       <option value="Private Companies">Private Companies</option>
                       <option value="Public Companies">Public Companies</option>
                       <option value="One Person Company">One Person Company</option>
                     </select>
-                    <select name="Size" id="cSize" class="mid">
+                    <select name="Size" id="cSize" class="mid" required  >
                       <option value="1-50">company Size</option>
                       <option value="1-50">(1-50) Employee</option>
                       <option value="51-100">(51-100) Employee</option>
@@ -117,7 +117,7 @@
               <section>
                 <label for="JobCategory" class="JobCategory" id="JobCategory">Job Category</label><br>
                 <!-- <input type="text" id="jobcategory" name="job" value=" "><br> -->
-                <select name="jCategory" id="jc">
+                <select name="jCategory" id="jc"  required  >
                   <option value="Sales"> Sales </option>
                   <option value="Business, Management and Administration">Business, management and administration
                   </option>
@@ -156,8 +156,8 @@
                   <option value="Evening">Evening</option>
                   <option value="Night">Night</option>
                 </select></br>
-                <input type="text" id="payR" name="payR" placeholder="Pay Rate / PerHour / JD"   ><br>
-        <input id="submit" type="submit"  class="submit" value="Submit" >
+                <input type="text" id="payR" name="payR" placeholder="Pay Rate / PerHour / JD"  required  ><br>
+        <input id="submit" type="submit"  class="submit" value="Submit"  required >
     </section>
 </section>
         </main>
