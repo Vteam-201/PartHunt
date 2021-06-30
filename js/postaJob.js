@@ -19,9 +19,8 @@ size = document.getElementById( 'cSize' ).options[document.getElementById( 'cSiz
 industry = document.getElementById( 'cIndustry' ).options[document.getElementById( 'cIndustry' ).selectedIndex].value;
 
 let formsubmit = document.getElementById( 'submit' );
-formsubmit.addEventListener( 'submit', newJobposts );
-function newJobposts ( event ){
-  event.preventDefault();
+formsubmit.addEventListener( 'click', newJobposts );
+function newJobposts ( ){
   posts.addPost ( pid, id, jobTitle, jobDescription, jobShift, jobCategory, payRate, companySrc );
   posts.saveToLocalStorage();
 
