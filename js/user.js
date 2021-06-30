@@ -16,21 +16,21 @@ function appendCompany() {
   //   cards.appendChild( section )
 }
 appendCompany();
-document.getElementsByClassName( 'close' )[0].addEventListener( 'click', hideModal );
-let editProfileModal = document.getElementById( 'myModal' );
-let openNewFormbtn = document.getElementById( 'openNewFormbtn' );
-let editProfileBtn = document.getElementById( 'editProfileBtn' );
-editProfileBtn.addEventListener( 'click',openEditProfile );
-function openEditProfile(){
-  editProfileModal.style.display = 'block';
-}
-function hideModal() {
-  // modal.style.display = 'none';
-  editProfileModal.style.display = 'none';
-}
-openNewFormbtn.addEventListener( 'click',acclogOut );
-function acclogOut( e ){
-  e.preventDefault();
+// document.getElementsByClassName( 'close' )[0].addEventListener( 'click', hideModal );
+// let editProfileModal = document.getElementById( 'myModal' );
+let logutBtn = document.getElementById( 'logutBtn' );
+// let editProfileBtn = document.getElementById( 'editProfileBtn' );
+
+// editProfileBtn.addEventListener( 'click',openEditProfile );
+// function openEditProfile(){
+//   editProfileModal.style.display = 'block';
+// }
+// function hideModal() {
+//   // modal.style.display = 'none';
+//   editProfileModal.style.display = 'none';
+// }
+logutBtn.addEventListener( 'click',acclogOut );
+function acclogOut( ){
   localStorage.removeItem( 'CURRENT_USER' );
   window.location = '../index.html';
 }

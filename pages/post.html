@@ -7,14 +7,11 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/postajob.css">
-
+    <link rel="shortcut icon" type="image/jpg" href="../res/fav.png" />
     <title>Post Job Page- PartHunt</title>
     <script src="../js/countries.js"></script>
-    <style>
-      .card{
-        display: none;
-      }
-    </style>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 <body>
     <section class="container">
@@ -24,7 +21,7 @@
             <a href="../index.html" >Home</a>
             <a href="../pages/jobs.html">Jobs</a>
             <a href="../pages/post.html" class="active">Post a Job</a>
-            <a href="../pages/jobrequest.html">ٌRequest a Job</a>
+            <a href="../pages/jobrequest.html">Request a Job</a>
             <a href="../pages/aboutus.html">About us</a>
           </nav>
         </header>
@@ -35,7 +32,7 @@
      <!-- <center></center> -->
   
           <section> 
-            <form id="regCompanyForm" class="form-inline"  name ="myForm"  id="form"    >
+            <form  class="form-inline"  name ="myForm"  id="form"    >
               <div id="regComForm"><div id="error"></div>
                 <section class="input">
                   <input type="text" id="companyName" class="a" name="CompanyName"placeholder="Company Name" >
@@ -171,8 +168,10 @@
         <img src="../res/logooooo.png" alt="">
         <p class="footer-links">
           <a href="#" class="link-1">Home</a>
-
           <a href="./pages/jobs.html">Jobs</a>
+
+          <a href="../pages/jobrequest.html">Request a Job</a>
+
 
         </p>
 
@@ -219,9 +218,8 @@
 
     </footer>
         </section>
-        <script src="/js/app.js"></script>
-        <script src="/js/postaJob.js"></script>
-        <script src="/js/style.js"></script>
+        <script src="../js/postaJob.js"></script>
+        <script src="../js/style.js"></script>
         <script src="https://kit.fontawesome.com/9e5d1913ca.js" crossorigin="anonymous"></script>
 </body>
 </html>

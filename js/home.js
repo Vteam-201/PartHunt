@@ -138,10 +138,19 @@ function regUserBtn( e ){
   email = document.getElementById( 'email' ).value;
   phone = document.getElementById( 'phone' ).value;
   uPassword = document.getElementById( 'uPassword' ).value;
+  Swal.fire( {
+    position: 'top-end',
+    icon: 'success',
+    title: 'Your account has been registered, Please log in',
+    showConfirmButton: false,
+    timer: 2000
+
+  } );
   user.addUser( id,fName,lName,email,phone,uPassword );
   user.saveToLocalStorage();
   document.getElementById( 'ReguserForm' ).reset();
   registrationModal.style.display = 'none';
+
 }
 function acclogin( e ){
   e.preventDefault();

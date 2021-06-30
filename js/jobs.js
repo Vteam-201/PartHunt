@@ -165,8 +165,14 @@ function submitForm(){
         console.log( i );
         if ( i.appID === appID ){
           exists = true;
-          alert( 'allready applied' );
-          location.reload();
+          Swal.fire( {
+            position: 'top-end',
+            icon: 'success',
+            title: 'allready Applied',
+            showConfirmButton: false,
+            timer: 2000
+          } );
+          hideModal();
           break;}}
       if( !exists ){
 
@@ -175,8 +181,15 @@ function submitForm(){
         console.log( Date() );
         application.saveToLocalStorage( application.applications );
         jobapplicationform.style.display = 'none';
-        confirm( 'applicationSubmitedAlert' );
-        location.reload();
+        Swal.fire( {
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your application submitted',
+          showConfirmButton: false,
+          timer: 2000
+
+        } );
+        hideModal();
       }}else{
       if ( confirm( 'Please Login or Register to apply' ) ){
         location.href = '../index.html';

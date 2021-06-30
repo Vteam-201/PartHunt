@@ -14,7 +14,7 @@ function appendCompany() {
       document.getElementById( 'companyImg' ).src = `../res/${i.imgSrc}`;
       document.getElementById( 'industry' ).textContent = i.industry;
       document.getElementById( 'specialties' ).textContent = i.specialties;
-      document.getElementById( 'email' ).textContent = i.address;
+      document.getElementById( 'email' ).textContent = i.website;
       document.getElementById( 'location' ).textContent = i.headquarters;
       document.getElementById( 'phone' ).textContent = i.phone;
     }
